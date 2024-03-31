@@ -18,6 +18,7 @@ from .modified_resnet import ModifiedResNet
 from .timm_model import TimmModel
 from .transformer import LayerNormFp32, LayerNorm, QuickGELU, Attention, VisionTransformer, TextTransformer
 from .utils import to_2tuple
+from .transformer_mae import MAETransformer
 
 
 @dataclass
@@ -34,6 +35,8 @@ class CLIPVisionCfg:
     timm_pool: str = 'avg'  # feature pooling for timm model ('abs_attn', 'rot_attn', 'avg', '')
     timm_proj: str = 'linear'  # linear projection for timm model output ('linear', 'mlp', '')
     timm_proj_bias: bool = False  # enable bias final projection
+    mae_model_name: str = None
+    mae_model_pretrained: str = None
 
 
 @dataclass
@@ -84,6 +87,14 @@ def _build_vision_tower(
             image_size=vision_cfg.image_size
         )
         act_layer = nn.GELU  # so that text transformer doesn't use QuickGELU w/ timm models
+        
+    elif vision_cfg.mae_model_name:
+        visual = MAETransformer(
+            model_name=vision_cfg.mae_model_name,
+            image_size=vision_cfg.image_size,
+            output_dim=embed_dim
+            )
+
     elif isinstance(vision_cfg.layers, (tuple, list)):
         vision_heads = vision_cfg.width * 32 // vision_cfg.head_width
         visual = ModifiedResNet(
@@ -178,8 +189,11 @@ class CLIP(nn.Module):
         self.visual.set_grad_checkpointing(enable)
         self.transformer.grad_checkpointing = enable
 
-    def encode_image(self, image, normalize: bool = False):
+    def encode_image(self, image, normalize: bool = False, mask_ratio=0.):
+        if mask_ratio > 0.:
+            features = self.visual.mask_forward(image, mask_ratio)
         features = self.visual(image)
+        
         return F.normalize(features, dim=-1) if normalize else features
 
     def encode_text(self, text, normalize: bool = False):
@@ -196,9 +210,12 @@ class CLIP(nn.Module):
         x = x[torch.arange(x.shape[0]), text.argmax(dim=-1)] @ self.text_projection
         return F.normalize(x, dim=-1) if normalize else x
 
-    def forward(self, image, text):
-        image_features = self.encode_image(image, normalize=True)
-        text_features = self.encode_text(text, normalize=True)
+    def forward(self, image, text, distill=False, mask_ratio=0.):
+        flag = True
+        if distill is True:
+            flag = False
+        image_features = self.encode_image(image, normalize=flag, mask_ratio=mask_ratio)
+        text_features = self.encode_text(text, normalize=flag)
         return image_features, text_features, self.logit_scale.exp()
 
 
@@ -363,6 +380,30 @@ def trace_model(model, batch_size=256, device=torch.device('cpu')):
     return model
 
 
+def interpolate_pos_embed(model, checkpoint_model):
+    if 'pos_embed' in checkpoint_model:
+        pos_embed_checkpoint = checkpoint_model['pos_embed']
+        embedding_size = pos_embed_checkpoint.shape[-1]
+        num_patches = model.patch_embed.num_patches
+        num_extra_tokens = model.pos_embed.shape[-2] - num_patches
+        # height (== width) for the checkpoint position embedding
+        orig_size = int((pos_embed_checkpoint.shape[-2] - num_extra_tokens) ** 0.5)
+        # height (== width) for the new position embedding
+        new_size = int(num_patches ** 0.5)
+        # class_token and dist_token are kept unchanged
+        if orig_size != new_size:
+            print("Position interpolate from %dx%d to %dx%d" % (orig_size, orig_size, new_size, new_size))
+            extra_tokens = pos_embed_checkpoint[:, :num_extra_tokens]
+            # only the position tokens are interpolated
+            pos_tokens = pos_embed_checkpoint[:, num_extra_tokens:]
+            pos_tokens = pos_tokens.reshape(-1, orig_size, orig_size, embedding_size).permute(0, 3, 1, 2)
+            pos_tokens = torch.nn.functional.interpolate(
+                pos_tokens, size=(new_size, new_size), mode='bicubic', align_corners=False)
+            pos_tokens = pos_tokens.permute(0, 2, 3, 1).flatten(1, 2)
+            new_pos_embed = torch.cat((extra_tokens, pos_tokens), dim=1)
+            checkpoint_model['pos_embed'] = new_pos_embed
+            
+            
 def resize_pos_embed(state_dict, model, interpolation: str = 'bicubic', seq_dim=1):
     # Rescale the grid of position embeddings when loading from state_dict
     old_pos_embed = state_dict.get('visual.positional_embedding', None)

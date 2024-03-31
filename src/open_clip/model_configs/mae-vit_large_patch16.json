@@ -1,0 +1,18 @@
+
+{
+    "embed_dim": 768,
+    "vision_cfg": {
+        "mae_model_name": "mae-vit_large_patch16",
+        "mae_model_pretrained": "/vc_data/v-chuyang/pretrained_models/mae_pretrain_vit_large.pth",
+        "image_size": 224
+    },
+    "text_cfg": {
+        "context_length": 77,
+        "vocab_size": 49408,
+        "width": 768,
+        "heads": 12,
+        "layers": 12
+    }
+}
+
+

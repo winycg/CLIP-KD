@@ -11,7 +11,7 @@ import torch
 
 from .constants import OPENAI_DATASET_MEAN, OPENAI_DATASET_STD
 from .model import CLIP, CustomTextCLIP, convert_weights_to_lp, convert_to_custom_text_state_dict,\
-    resize_pos_embed, get_cast_dtype
+    resize_pos_embed, interpolate_pos_embed, get_cast_dtype
 from .openai import load_openai_model
 from .pretrained import is_pretrained_cfg, get_pretrained_cfg, download_pretrained, list_pretrained_tags_by_model
 from .transform import image_transform
@@ -96,6 +96,22 @@ def load_checkpoint(model, checkpoint_path, strict=True):
     incompatible_keys = model.load_state_dict(state_dict, strict=strict)
     return incompatible_keys
 
+def load_mae_checkpoint(model, checkpoint_path, strict=True):
+    checkpoint = torch.load(checkpoint_path, map_location='cpu')
+    checkpoint_model = checkpoint['model']
+    state_dict = model.state_dict()
+    
+    for k in ['head.weight', 'head.bias']:
+        if k in checkpoint_model and checkpoint_model[k].shape != state_dict[k].shape:
+            print(f"Removing key {k} from pretrained checkpoint")
+            del checkpoint_model[k]
+
+    # interpolate position embedding
+    interpolate_pos_embed(model, checkpoint_model)
+    model.load_state_dict(checkpoint_model, strict=True)
+    print('Load MAE-pretrained model successfully!')
+    # detect old format and make compatible with new format
+    return model
 
 def create_model(
         model_name: str,
@@ -137,6 +153,9 @@ def create_model(
             if 'timm_model_name' in model_cfg.get('vision_cfg', {}):
                 # pretrained weight loading for timm models set via vision_cfg
                 model_cfg['vision_cfg']['timm_model_pretrained'] = True
+            elif 'mae_model_name' in model_cfg.get('vision_cfg', {}):
+                pass
+                
             else:
                 assert False, 'pretrained image towers currently only supported for timm models'
 
@@ -147,6 +166,9 @@ def create_model(
             model = CustomTextCLIP(**model_cfg, cast_dtype=cast_dtype)
         else:
             model = CLIP(**model_cfg, cast_dtype=cast_dtype)
+        
+        if 'mae_model_name' in model_cfg.get('vision_cfg', {}):
+            load_mae_checkpoint(model.visual.backbone, model_cfg['vision_cfg']['mae_model_pretrained'])
 
         pretrained_cfg = {}
         if pretrained:
@@ -222,6 +244,64 @@ def create_model_and_transforms(
     )
 
     return model, preprocess_train, preprocess_val
+
+
+
+def create_kd_model_and_transforms(
+        model_name: str,
+        teacher_model_name: str,
+        pretrained: Optional[str] = None,
+        precision: str = 'fp32',
+        device: Union[str, torch.device] = 'cpu',
+        jit: bool = False,
+        force_quick_gelu: bool = False,
+        force_custom_text: bool = False,
+        pretrained_image: bool = False,
+        image_mean: Optional[Tuple[float, ...]] = None,
+        image_std: Optional[Tuple[float, ...]] = None,
+        cache_dir: Optional[str] = None,
+):
+    model = create_model(
+        model_name,
+        pretrained,
+        precision=precision,
+        device=device,
+        jit=jit,
+        force_quick_gelu=force_quick_gelu,
+        force_custom_text=force_custom_text,
+        pretrained_image=pretrained_image,
+        cache_dir=cache_dir,
+    )
+
+    t_model = create_model(
+        teacher_model_name,
+        pretrained,
+        precision=precision,
+        device=device,
+        jit=jit,
+        force_quick_gelu=force_quick_gelu,
+        force_custom_text=force_custom_text,
+        pretrained_image=pretrained_image,
+        cache_dir=cache_dir,
+    )
+
+    image_mean = image_mean or getattr(model.visual, 'image_mean', None)
+    image_std = image_std or getattr(model.visual, 'image_std', None)
+    preprocess_train = image_transform(
+        model.visual.image_size,
+        is_train=True,
+        mean=image_mean,
+        std=image_std
+    )
+    preprocess_val = image_transform(
+        model.visual.image_size,
+        is_train=False,
+        mean=image_mean,
+        std=image_std
+    )
+
+    return model, t_model, preprocess_train, preprocess_val
+
 
 
 def create_model_from_pretrained(

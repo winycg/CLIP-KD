@@ -1,0 +1,1000 @@
+tench, Tinca_tinca	freshwater dace-like game fish of Europe and western Asia noted for ability to survive outside water
+goldfish, Carassius_auratus	small golden or orange-red freshwater fishes of Eurasia used as pond or aquarium fishes
+great_white_shark, white_shark, man-eater, man-eating_shark, Carcharodon_carcharias	large aggressive shark widespread in warm seas; known to attack humans
+tiger_shark, Galeocerdo_cuvieri	large dangerous warm-water shark with striped or spotted body
+hammerhead, hammerhead_shark	medium-sized live-bearing shark with eyes at either end of a flattened hammer-shaped head; worldwide in warm waters; can be dangerous
+electric_ray, crampfish, numbfish, torpedo	any sluggish bottom-dwelling ray of the order Torpediniformes having a rounded body and electric organs on each side of the head capable of emitting strong electric discharges
+stingray	large venomous ray with large barbed spines near the base of a thin whiplike tail capable of inflicting severe wounds
+cock	adult male bird
+hen	adult female bird
+ostrich, Struthio_camelus	fast-running African flightless bird with two-toed feet; largest living bird
+brambling, Fringilla_montifringilla	Eurasian finch
+goldfinch, Carduelis_carduelis	small European finch having a crimson face and yellow-and-black wings
+house_finch, linnet, Carpodacus_mexicanus	small finch originally of the western United States and Mexico
+junco, snowbird	small North American finch seen chiefly in winter
+indigo_bunting, indigo_finch, indigo_bird, Passerina_cyanea	small deep blue North American bunting
+robin, American_robin, Turdus_migratorius	large American thrush having a rust-red breast and abdomen
+bulbul	nightingale spoken of in Persian poetry
+jay	crested largely blue bird
+magpie	long-tailed black-and-white crow that utters a raucous chattering call
+chickadee	any of various small grey-and-black songbirds of North America
+water_ouzel, dipper	small stocky diving bird without webbed feet; frequents fast-flowing streams and feeds along the bottom
+kite	any of several small graceful hawks of the family Accipitridae having long pointed wings and feeding on insects and small animals
+bald_eagle, American_eagle, Haliaeetus_leucocephalus	a large eagle of North America that has a white head and dark wings and body
+vulture	any of various large diurnal birds of prey having naked heads and weak claws and feeding chiefly on carrion
+great_grey_owl, great_gray_owl, Strix_nebulosa	large dish-faced owl of northern North America and western Eurasia
+European_fire_salamander, Salamandra_salamandra	a kind of European salamander
+common_newt, Triturus_vulgaris	small semiaquatic salamander
+eft	a newt in its terrestrial stage of development
+spotted_salamander, Ambystoma_maculatum	glossy black North American salamander with yellow spots
+axolotl, mud_puppy, Ambystoma_mexicanum	larval salamander of mountain lakes of Mexico that usually lives without metamorphosing
+bullfrog, Rana_catesbeiana	largest North American frog; highly aquatic with a deep-pitched voice
+tree_frog, tree-frog	any of various Old World arboreal frogs distinguished from true frogs by adhesive suckers on the toes
+tailed_frog, bell_toad, ribbed_toad, tailed_toad, Ascaphus_trui	western North American frog with a taillike copulatory organ
+loggerhead, loggerhead_turtle, Caretta_caretta	very large carnivorous sea turtle; wide-ranging in warm open seas
+leatherback_turtle, leatherback, leathery_turtle, Dermochelys_coriacea	wide-ranging marine turtle with flexible leathery carapace; largest living turtle
+mud_turtle	bottom-dwelling freshwater turtle inhabiting muddy rivers of North America and Central America
+terrapin	any of various edible North American web-footed turtles living in fresh or brackish water
+box_turtle, box_tortoise	chiefly terrestrial turtle of North America; shell can be closed tightly
+banded_gecko	any of several geckos with dark bands across the body and differing from typical geckos in having movable eyelids; of United States southwest and Florida Gulf Coast
+common_iguana, iguana, Iguana_iguana	large herbivorous tropical American arboreal lizards with a spiny crest along the back; used as human food in Central America and South America
+American_chameleon, anole, Anolis_carolinensis	small arboreal tropical American insectivorous lizards with the ability to change skin color
+whiptail, whiptail_lizard	any of numerous very agile and alert New World lizards
+agama	small terrestrial lizard of warm regions of the Old World
+frilled_lizard, Chlamydosaurus_kingi	large arboreal insectivorous Australian lizard with a ruff of skin around the neck
+alligator_lizard	slim short-limbed lizard having a distinctive fold on each side that permits expansion; of western North America
+Gila_monster, Heloderma_suspectum	large orange and black lizard of southwestern United States; not dangerous unless molested
+green_lizard, Lacerta_viridis	a common Eurasian lizard about a foot long
+African_chameleon, Chamaeleo_chamaeleon	a chameleon found in Africa
+Komodo_dragon, Komodo_lizard, dragon_lizard, giant_lizard, Varanus_komodoensis	the largest lizard in the world (10 feet); found on Indonesian islands
+African_crocodile, Nile_crocodile, Crocodylus_niloticus	a dangerous crocodile widely distributed in Africa
+American_alligator, Alligator_mississipiensis	large alligator of the southeastern United States
+triceratops	huge ceratopsian dinosaur having three horns and the neck heavily armored with a very solid frill
+thunder_snake, worm_snake, Carphophis_amoenus	small reddish wormlike snake of eastern United States
+ringneck_snake, ring-necked_snake, ring_snake	any of numerous small nonvenomous North American snakes with a yellow or orange ring around the neck
+hognose_snake, puff_adder, sand_viper	harmless North American snake with upturned nose; may spread its head and neck or play dead when disturbed
+green_snake, grass_snake	either of two North American chiefly insectivorous snakes that are green in color
+king_snake, kingsnake	any of numerous nonvenomous North American constrictors; feed on other snakes and small mammals
+garter_snake, grass_snake	any of numerous nonvenomous longitudinally-striped viviparous North American and Central American snakes
+water_snake	any of various mostly harmless snakes that live in or near water
+vine_snake	slender arboreal snake found from southern Arizona to Bolivia
+night_snake, Hypsiglena_torquata	nocturnal prowler of western United States and Mexico
+boa_constrictor, Constrictor_constrictor	very large boa of tropical America and West Indies
+rock_python, rock_snake, Python_sebae	very large python of tropical and southern Africa
+Indian_cobra, Naja_naja	a cobra of tropical Africa and Asia
+green_mamba	green phase of the black mamba
+sea_snake	any of numerous venomous aquatic viviparous snakes having a fin-like tail; of warm littoral seas; feed on fish which they immobilize with quick-acting venom
+horned_viper, cerastes, sand_viper, horned_asp, Cerastes_cornutus	highly venomous viper of northern Africa and southwestern Asia having a horny spine above each eye
+diamondback, diamondback_rattlesnake, Crotalus_adamanteus	large deadly rattlesnake with diamond-shaped markings
+sidewinder, horned_rattlesnake, Crotalus_cerastes	small pale-colored desert rattlesnake of southwestern United States; body moves in an s-shaped curve
+trilobite	an extinct arthropod that was abundant in Paleozoic times; had an exoskeleton divided into three parts
+harvestman, daddy_longlegs, Phalangium_opilio	spiderlike arachnid with a small rounded body and very long thin legs
+scorpion	arachnid of warm dry regions having a long segmented tail ending in a venomous stinger
+black_and_gold_garden_spider, Argiope_aurantia	a widely distributed North American garden spider
+barn_spider, Araneus_cavaticus	an orange and tan spider with darkly banded legs that spins an orb web daily
+garden_spider, Aranea_diademata	a spider common in European gardens
+black_widow, Latrodectus_mactans	venomous New World spider; the female is black with an hourglass-shaped red mark on the underside of the abdomen
+tarantula	large hairy tropical spider with fangs that can inflict painful but not highly venomous bites
+wolf_spider, hunting_spider	ground spider that hunts its prey instead of using a web
+tick	any of two families of small parasitic arachnids with barbed proboscis; feed on blood of warm-blooded animals
+centipede	chiefly nocturnal predacious arthropod having a flattened body of 15 to 173 segments each with a pair of legs, the foremost pair being modified as prehensors
+black_grouse	grouse of which the male is bluish-black
+ptarmigan	large Arctic and subarctic grouse with feathered feet and usually white winter plumage
+ruffed_grouse, partridge, Bonasa_umbellus	valued as a game bird in eastern United States and Canada
+prairie_chicken, prairie_grouse, prairie_fowl	brown mottled North American grouse of western prairies
+peacock	male peafowl; having a crested head and very large fanlike tail marked with iridescent eyes or spots
+quail	small gallinaceous game birds
+partridge	small Old World gallinaceous game birds
+African_grey, African_gray, Psittacus_erithacus	commonly domesticated grey parrot with red-and-black tail and white face; native to equatorial Africa
+macaw	long-tailed brilliantly colored parrot of Central America and South America; among the largest and showiest of parrots
+sulphur-crested_cockatoo, Kakatoe_galerita, Cacatua_galerita	white cockatoo with a yellow erectile crest
+lorikeet	any of various small lories
+coucal	Old World ground-living cuckoo having a long dagger-like hind claw
+bee_eater	colorful chiefly tropical Old World bird having a strong graceful flight; feeds on especially bees
+hornbill	bird of tropical Africa and Asia having a very large bill surmounted by a bony protuberance; related to kingfishers
+hummingbird	tiny American bird having brilliant iridescent plumage and long slender bills; wings are specialized for vibrating flight
+jacamar	tropical American insectivorous bird having a long sharp bill and iridescent green or bronze plumage
+toucan	brilliantly colored arboreal fruit-eating bird of tropical America having a very large thin-walled beak
+drake	adult male of a wild or domestic duck
+red-breasted_merganser, Mergus_serrator	widely distributed merganser of America and Europe
+goose	web-footed long-necked typically gregarious migratory aquatic birds usually larger and less aquatic than ducks
+black_swan, Cygnus_atratus	large Australian swan having black plumage and a red bill
+tusker	any mammal with prominent tusks (especially an elephant or wild boar)
+echidna, spiny_anteater, anteater	a burrowing monotreme mammal covered with spines and having a long snout and claws for hunting ants and termites; native to Australia
+platypus, duckbill, duckbilled_platypus, duck-billed_platypus, Ornithorhynchus_anatinus	small densely furred aquatic monotreme of Australia and Tasmania having a broad bill and tail and webbed feet; only species in the family Ornithorhynchidae
+wallaby, brush_kangaroo	any of various small or medium-sized kangaroos; often brightly colored
+koala, koala_bear, kangaroo_bear, native_bear, Phascolarctos_cinereus	sluggish tailless Australian arboreal marsupial with grey furry ears and coat; feeds on eucalyptus leaves and bark
+wombat	burrowing herbivorous Australian marsupials about the size of a badger
+jellyfish	any of numerous usually marine and free-swimming coelenterates that constitute the sexually reproductive forms of hydrozoans and scyphozoans
+sea_anemone, anemone	marine polyps that resemble flowers but have oral rings of tentacles; differ from corals in forming no hard skeleton
+brain_coral	massive reef-building coral having a convoluted and furrowed surface
+flatworm, platyhelminth	parasitic or free-living worms having a flattened body
+nematode, nematode_worm, roundworm	unsegmented worms with elongated rounded body pointed at both ends; mostly free-living but some are parasitic
+conch	any of various edible tropical marine gastropods of the genus Strombus having a brightly-colored spiral shell with large outer lip
+snail	freshwater or marine or terrestrial gastropod mollusk usually having an external enclosing spiral shell
+slug	any of various terrestrial gastropods having an elongated slimy body and no external shell
+sea_slug, nudibranch	any of various marine gastropods of the suborder Nudibranchia having a shell-less and often beautifully colored body
+chiton, coat-of-mail_shell, sea_cradle, polyplacophore	primitive elongated bilaterally symmetrical marine mollusk having a mantle covered with eight calcareous plates
+chambered_nautilus, pearly_nautilus, nautilus	cephalopod of the Indian and Pacific oceans having a spiral shell with pale pearly partitions
+Dungeness_crab, Cancer_magister	small edible crab of Pacific coast of North America
+rock_crab, Cancer_irroratus	crab of eastern coast of North America
+fiddler_crab	burrowing crab of American coastal regions having one claw much enlarged in the male
+king_crab, Alaska_crab, Alaskan_king_crab, Alaska_king_crab, Paralithodes_camtschatica	large edible crab of northern Pacific waters especially along the coasts of Alaska and Japan
+American_lobster, Northern_lobster, Maine_lobster, Homarus_americanus	lobster of Atlantic coast of America
+spiny_lobster, langouste, rock_lobster, crawfish, crayfish, sea_crawfish	large edible marine crustacean having a spiny carapace but lacking the large pincers of true lobsters
+crayfish, crawfish, crawdad, crawdaddy	small freshwater decapod crustacean that resembles a lobster
+hermit_crab	small soft-bodied marine crustaceans living in cast-off shells of gastropods
+isopod	any of various small terrestrial or aquatic crustaceans with seven pairs of legs adapted for crawling
+white_stork, Ciconia_ciconia	the common stork of Europe; white with black wing feathers and a red bill
+black_stork, Ciconia_nigra	Old World stork that is glossy black above and white below
+spoonbill	wading birds having a long flat bill with a tip like a spoon
+flamingo	large pink to scarlet web-footed wading bird with down-bent bill; inhabits brackish lakes
+little_blue_heron, Egretta_caerulea	small bluish-grey heron of the western hemisphere
+American_egret, great_white_heron, Egretta_albus	a common egret of the genus Egretta found in America; it is a variety of the Old World white egret Casmerodius albus
+bittern	relatively small compact tawny-brown heron with nocturnal habits and a booming cry; found in marshes
+crane	large long-necked wading bird of marshes and plains in many parts of the world
+limpkin, Aramus_pictus	wading bird of Florida, Cuba and Jamaica having a drooping bill and a distinctive wailing call
+European_gallinule, Porphyrio_porphyrio	purple gallinule of southern Europe
+American_coot, marsh_hen, mud_hen, water_hen, Fulica_americana	a coot found in North America
+bustard	large heavy-bodied chiefly terrestrial game bird capable of powerful swift flight; classified with wading birds but frequents grassy steppes
+ruddy_turnstone, Arenaria_interpres	common Arctic turnstone that winters in South America and Australia
+red-backed_sandpiper, dunlin, Erolia_alpina	small common sandpiper that breeds in northern or Arctic regions and winters in southern United States or Mediterranean regions
+redshank, Tringa_totanus	a common Old World wading bird with long red legs
+dowitcher	shorebird of the sandpiper family that resembles a snipe
+oystercatcher, oyster_catcher	black-and-white shorebird with stout legs and bill; feed on oysters etc.
+pelican	large long-winged warm-water seabird having a large bill with a distensible pouch for fish
+king_penguin, Aptenodytes_patagonica	large penguin on islands bordering the Antarctic Circle
+albatross, mollymawk	large web-footed birds of the southern hemisphere having long narrow wings; noted for powerful gliding flight
+grey_whale, gray_whale, devilfish, Eschrichtius_gibbosus, Eschrichtius_robustus	medium-sized greyish-black whale of the northern Pacific
+killer_whale, killer, orca, grampus, sea_wolf, Orcinus_orca	predatory black-and-white toothed whale with large dorsal fin; common in cold seas
+dugong, Dugong_dugon	sirenian tusked mammal found from eastern Africa to Australia; the flat tail is bilobate
+sea_lion	any of several large eared seals of the northern Pacific related to fur seals but lacking their valuable coat
+Chihuahua	an old breed of tiny short-haired dog with protruding eyes from Mexico held to antedate Aztec civilization
+Japanese_spaniel	breed of toy dogs originating in Japan having a silky black-and-white or red-and-white coat
+Maltese_dog, Maltese_terrier, Maltese	breed of toy dogs having a long straight silky white coat
+Pekinese, Pekingese, Peke	a Chinese breed of small short-legged dogs with a long silky coat and broad flat muzzle
+Shih-Tzu	a Chinese breed of small dog similar to a Pekingese
+Blenheim_spaniel	red-and-white variety of English toy spaniel
+papillon	small slender toy spaniel with erect ears and a black-spotted brown to white coat
+toy_terrier	a small active dog
+Rhodesian_ridgeback	a powerful short-haired African hunting dog having a crest of reversed hair along the spine
+Afghan_hound, Afghan	tall graceful breed of hound with a long silky coat; native to the Near East
+basset, basset_hound	smooth-haired breed of hound with short legs and long ears
+beagle	a small short-legged smooth-coated breed of hound
+bloodhound, sleuthhound	a breed of large powerful hound of European origin having very acute smell and used in tracking
+bluetick	a very fast American hound; white mottled with bluish grey
+black-and-tan_coonhound	American breed of large powerful hound dogs used for hunting raccoons and other game
+Walker_hound, Walker_foxhound	an American breed of foxhound
+English_foxhound	an English breed slightly larger than the American foxhounds originally used to hunt in packs
+redbone	a speedy red or red-and-tan American hound
+borzoi, Russian_wolfhound	tall fast-moving dog breed
+Irish_wolfhound	large breed of hound with a rough thick coat
+Italian_greyhound	a toy dog developed from the greyhound
+whippet	small slender dog of greyhound type developed in England
+Ibizan_hound, Ibizan_Podenco	breed of slender agile medium-sized hound found chiefly in the Balearic Islands; said to have been bred originally by the Pharaohs of ancient Egypt
+Norwegian_elkhound, elkhound	breed of compact medium-sized dog with a heavy grey coat developed in Norway for hunting elk
+otterhound, otter_hound	hardy British hound having long pendulous ears and a thick coarse shaggy coat with an oily undercoat; bred for hunting otters
+Saluki, gazelle_hound	old breed of tall swift keen-eyed hunting dogs resembling greyhounds; from Egypt and southwestern Asia
+Scottish_deerhound, deerhound	very large and tall rough-coated dog bred for hunting deer; known as the royal dog of Scotland
+Weimaraner	large breed of hound having a smooth greyish coat; originated in Germany
+Staffordshire_bullterrier, Staffordshire_bull_terrier	English breed of strong stocky dog having a broad skull and smooth coat
+American_Staffordshire_terrier, Staffordshire_terrier, American_pit_bull_terrier, pit_bull_terrier	American breed of muscular terriers with a short close-lying stiff coat
+Bedlington_terrier	a light terrier groomed to resemble a lamb
+Border_terrier	small rough-coated terrier of British origin
+Kerry_blue_terrier	an Irish breed of medium-sized terriers with a silky blue-grey coat
+Irish_terrier	medium-sized breed with a wiry brown coat; developed in Ireland
+Norfolk_terrier	English breed of small terrier with a straight wiry grizzled coat and dropped ears
+Norwich_terrier	English breed of small short-legged terrier with a straight wiry red or grey or black-and-tan coat and erect ears
+Yorkshire_terrier	very small breed having a long glossy coat of bluish-grey and tan
+wire-haired_fox_terrier	a fox terrier with wiry hair
+Lakeland_terrier	breed of wire-haired terrier originally from the Lake District of England and used for hunting
+Sealyham_terrier, Sealyham	a wire-haired terrier with short legs that was first bred in Sealyham
+Airedale, Airedale_terrier	breed of large wiry-coated terrier bred in Yorkshire
+cairn, cairn_terrier	small rough-haired breed of terrier from Scotland
+Australian_terrier	small greyish wire-haired breed of terrier from Australia similar to the cairn
+Dandie_Dinmont, Dandie_Dinmont_terrier	a breed of small terrier with long wiry coat and drooping ears
+Boston_bull, Boston_terrier	small pug-faced American terrier breed having a smooth brindle or black coat with white markings
+miniature_schnauzer	a small schnauzer
+giant_schnauzer	a large schnauzer
+standard_schnauzer	a medium-sized schnauzer
+Scotch_terrier, Scottish_terrier, Scottie	old Scottish breed of small long-haired usually black terrier with erect tail and ears
+Tibetan_terrier, chrysanthemum_dog	breed of medium-sized terriers bred in Tibet resembling Old English sheepdogs with fluffy curled tails
+silky_terrier, Sydney_silky	Australian breed of toy dogs having a silky blue coat
+soft-coated_wheaten_terrier	Irish breed of medium-sized terrier with an abundant coat any shade of wheat and very hairy head and muzzle
+West_Highland_white_terrier	small white long-coated terrier developed in Scotland
+Lhasa, Lhasa_apso	a breed of terrier having a long heavy coat raised in Tibet as watchdogs
+flat-coated_retriever	an English breed having a shiny black or liver-colored coat; retrieves game from land or water
+curly-coated_retriever	an English breed having a tightly curled black or liver-colored coat; retrieves game from land or water
+golden_retriever	an English breed having a long silky golden coat
+Labrador_retriever	breed originally from Labrador having a short black or golden-brown coat
+Chesapeake_Bay_retriever	American breed having a short thick oily coat ranging from brown to light tan
+German_short-haired_pointer	liver or liver-and-white hunting dog developed in Germany; 3/4 pointer and 1/4 bloodhound
+vizsla, Hungarian_pointer	Hungarian hunting dog resembling the Weimaraner but having a rich deep red coat
+English_setter	an English breed having a plumed tail and a soft silky coat that is chiefly white
+Irish_setter, red_setter	an Irish breed with a chestnut-brown or mahogany-red coat
+Gordon_setter	a Scottish breed with a black-and-tan coat
+Brittany_spaniel	tall active short-tailed French breed of bird dog having a usually smooth orange- or liver-and-white coat
+clumber, clumber_spaniel	a thickset spaniel with longish silky hair
+English_springer, English_springer_spaniel	a breed having typically a black-and-white coat
+Welsh_springer_spaniel	a red-and-white breed slightly smaller than the English springer spaniel
+cocker_spaniel, English_cocker_spaniel, cocker	a small breed with wavy silky hair; originally developed in England
+Sussex_spaniel	an English breed with short legs and a golden liver-colored coat
+Irish_water_spaniel	breed of large spaniels developed in Ireland having a heavy coat of liver-colored curls and a topknot of long curls and a nearly hairless tail
+kuvasz	long-established Hungarian breed of tall light-footed but sturdy white dog; used also as a hunting dog
+schipperke	breed of small stocky black dogs originally used as watchdogs on boats in the Netherlands and Belgium
+groenendael	black-coated sheepdog with a heavily plumed tail
+malinois	fawn-colored short-haired sheepdog
+briard	old French breed of large strong usually black dogs having a long tail and long wavy and slightly stiff coat
+kelpie	an Australian sheepdog with pointed ears
+komondor	Hungarian breed of large powerful shaggy-coated white dog; used also as guard dog
+Old_English_sheepdog, bobtail	large sheepdog with a profuse shaggy bluish-grey-and-white coat and short tail; believed to trace back to the Roman occupation of Britain
+Shetland_sheepdog, Shetland_sheep_dog, Shetland	a small sheepdog resembling a collie that was developed in the Shetland Islands
+collie	a silky-coated sheepdog with a long ruff and long narrow head developed in Scotland
+Border_collie	developed in the area between Scotland and England usually having a black coat with white on the head and tip of tail used for herding both sheep and cattle
+Bouvier_des_Flandres, Bouviers_des_Flandres	rough-coated breed used originally in Belgium for herding and guarding cattle
+Rottweiler	German breed of large vigorous short-haired cattle dogs
+German_shepherd, German_shepherd_dog, German_police_dog, alsatian	breed of large shepherd dogs used in police work and as a guide for the blind
+Doberman, Doberman_pinscher	medium large breed of dog of German origin with a glossy black and tan coat; used as a watchdog
+miniature_pinscher	small German version of a Doberman pinscher
+Greater_Swiss_Mountain_dog	the largest of the four Swiss breeds
+Bernese_mountain_dog	large powerful long-haired black-coated Swiss dog with deep tan or russet markings on legs and white blaze and feet and chest marking; formerly used for draft
+Appenzeller	a smaller of the four Swiss breeds
+EntleBucher	the smallest of the Sennenhunde
+boxer	a breed of stocky medium-sized short-haired dog with a brindled coat and square-jawed muzzle developed in Germany
+bull_mastiff	large powerful breed developed by crossing the bulldog and the mastiff
+Tibetan_mastiff	very large powerful rough-coated dog native to central Asia
+French_bulldog	small stocky version of the bulldog having a sleek coat and square head
+Great_Dane	very large powerful smooth-coated breed of dog
+Saint_Bernard, St_Bernard	a Swiss alpine breed of large powerful dog with a thick coat of hair used as a rescue dog
+Eskimo_dog, husky	breed of heavy-coated Arctic sled dog
+malamute, malemute, Alaskan_malamute	breed of sled dog developed in Alaska
+Siberian_husky	breed of sled dog developed in northeastern Siberia; they resemble the larger Alaskan malamutes
+dalmatian, coach_dog, carriage_dog	a large breed having a smooth white coat with black or brown spots; originated in Dalmatia
+affenpinscher, monkey_pinscher, monkey_dog	European breed of small dog resembling a terrier with dark wiry hair and a tufted muzzle
+basenji	small smooth-haired breed of African origin having a tightly curled tail and the inability to bark
+pug, pug-dog	small compact smooth-coated breed of Asiatic origin having a tightly curled tail and broad flat wrinkled muzzle
+Leonberg	a large dog (usually with a golden coat) produced by crossing a St Bernard and a Newfoundland
+Newfoundland, Newfoundland_dog	a breed of very large heavy dogs with a thick coarse usually black coat; highly intelligent dogs and vigorous swimmers; developed in Newfoundland
+Great_Pyrenees	bred of large heavy-coated white dogs resembling the Newfoundland
+Samoyed, Samoyede	Siberian breed of white or cream-colored dog of the spitz family
+Pomeranian	breed of very small compact long-haired dogs of the spitz type
+chow, chow_chow	breed of medium-sized dogs with a thick coat and fluffy curled tails and distinctive blue-black tongues; believed to have originated in northern China
+keeshond	a spitz-like dog having a shaggy greyish coat and tightly curled tail originating in Holland
+Brabancon_griffon	a variety of Brussels griffon having a short smooth coat
+Pembroke, Pembroke_Welsh_corgi	the smaller and straight-legged variety of corgi having pointed ears and a short tail
+Cardigan, Cardigan_Welsh_corgi	slightly bowlegged variety of corgi having rounded ears and a long tail
+toy_poodle	the breed of very small poodles
+miniature_poodle	a breed of small poodles
+standard_poodle	a breed or medium-sized poodles
+Mexican_hairless	any of an old breed of small nearly hairless dogs of Mexico
+timber_wolf, grey_wolf, gray_wolf, Canis_lupus	a wolf with a brindled grey coat living in forested northern regions of North America
+white_wolf, Arctic_wolf, Canis_lupus_tundrarum	wolf of Arctic North America having white fur and a black-tipped tail
+red_wolf, maned_wolf, Canis_rufus, Canis_niger	reddish-grey wolf of southwestern North America
+coyote, prairie_wolf, brush_wolf, Canis_latrans	small wolf native to western North America
+dingo, warrigal, warragal, Canis_dingo	wolflike yellowish-brown wild dog of Australia
+dhole, Cuon_alpinus	fierce wild dog of the forests of central and southeast Asia that hunts in packs
+African_hunting_dog, hyena_dog, Cape_hunting_dog, Lycaon_pictus	a powerful doglike mammal of southern and eastern Africa that hunts in large packs; now rare in settled area
+hyena, hyaena	doglike nocturnal mammal of Africa and southern Asia that feeds chiefly on carrion
+red_fox, Vulpes_vulpes	the common Old World fox; having reddish-brown fur; commonly considered a single circumpolar species
+kit_fox, Vulpes_macrotis	small grey fox of southwestern United States; may be a subspecies of Vulpes velox
+Arctic_fox, white_fox, Alopex_lagopus	thickly-furred fox of Arctic regions; brownish in summer and white in winter
+grey_fox, gray_fox, Urocyon_cinereoargenteus	dark grey American fox; from Central America through southern United States
+tabby, tabby_cat	a cat with a grey or tawny coat mottled with black
+tiger_cat	a cat having a striped coat
+Persian_cat	a long-haired breed of cat
+Siamese_cat, Siamese	a slender short-haired blue-eyed breed of cat having a pale coat with dark ears paws face and tail tip
+Egyptian_cat	a domestic cat of Egypt
+cougar, puma, catamount, mountain_lion, painter, panther, Felis_concolor	large American feline resembling a lion
+lynx, catamount	short-tailed wildcats with usually tufted ears; valued for their fur
+leopard, Panthera_pardus	large feline of African and Asian forests usually having a tawny coat with black spots
+snow_leopard, ounce, Panthera_uncia	large feline of upland central Asia having long thick whitish fur
+jaguar, panther, Panthera_onca, Felis_onca	a large spotted feline of tropical America similar to the leopard; in some classifications considered a member of the genus Felis
+lion, king_of_beasts, Panthera_leo	large gregarious predatory feline of Africa and India having a tawny coat with a shaggy mane in the male
+tiger, Panthera_tigris	large feline of forests in most of Asia having a tawny coat with black stripes; endangered
+cheetah, chetah, Acinonyx_jubatus	long-legged spotted cat of Africa and southwestern Asia having nonretractile claws; the swiftest mammal; can be trained to run down game
+brown_bear, bruin, Ursus_arctos	large ferocious bear of Eurasia
+American_black_bear, black_bear, Ursus_americanus, Euarctos_americanus	brown to black North American bear; smaller and less ferocious than the brown bear
+ice_bear, polar_bear, Ursus_Maritimus, Thalarctos_maritimus	white bear of Arctic regions
+sloth_bear, Melursus_ursinus, Ursus_ursinus	common coarse-haired long-snouted bear of south-central Asia
+mongoose	agile grizzled Old World viverrine; preys on snakes and rodents
+meerkat, mierkat	a mongoose-like viverrine of South Africa having a face like a lemur and only four toes
+tiger_beetle	active usually bright-colored beetle that preys on other insects
+ladybug, ladybeetle, lady_beetle, ladybird, ladybird_beetle	small round bright-colored and spotted beetle that usually feeds on aphids and other insect pests
+ground_beetle, carabid_beetle	predacious shining black or metallic terrestrial beetle that destroys many injurious insects
+long-horned_beetle, longicorn, longicorn_beetle	long-bodied beetle having very long antennae
+leaf_beetle, chrysomelid	brightly colored beetle that feeds on plant leaves; larvae infest roots and stems
+dung_beetle	any of numerous beetles that roll balls of dung on which they feed and in which they lay eggs
+rhinoceros_beetle	any of various large chiefly tropical beetles having horns on the head; pest on coconuts
+weevil	any of several families of mostly small beetles that feed on plants and plant products; especially snout beetles and seed beetles
+fly	two-winged insects characterized by active flight
+bee	any of numerous hairy-bodied insects including social and solitary species
+ant, emmet, pismire	social insect living in organized colonies; characteristically the males and fertile queen have wings during breeding season; wingless sterile females are the workers
+grasshopper, hopper	terrestrial plant-eating insect with hind legs adapted for leaping
+cricket	leaping insect; male makes chirping noises by rubbing the forewings together
+walking_stick, walkingstick, stick_insect	any of various mostly tropical insects having long twiglike bodies
+cockroach, roach	any of numerous chiefly nocturnal insects; some are domestic pests
+mantis, mantid	predacious long-bodied large-eyed insect of warm regions; rests with forelimbs raised as in prayer
+cicada, cicala	stout-bodied insect with large membranous wings; male has drum-like organs for producing a high-pitched drone
+leafhopper	small leaping insect that sucks the juices of plants
+lacewing, lacewing_fly	any of two families of insects with gauzy wings (Chrysopidae and Hemerobiidae); larvae feed on insect pests such as aphids
+dragonfly, darning_needle, devil's_darning_needle, sewing_needle, snake_feeder, snake_doctor, mosquito_hawk, skeeter_hawk	slender-bodied non-stinging insect having iridescent wings that are outspread at rest; adults and nymphs feed on mosquitoes etc.
+damselfly	slender non-stinging insect similar to but smaller than the dragonfly but having wings folded when at rest
+admiral	any of several brightly colored butterflies
+ringlet, ringlet_butterfly	any of various butterflies belonging to the family Satyridae
+monarch, monarch_butterfly, milkweed_butterfly, Danaus_plexippus	large migratory American butterfly having deep orange wings with black and white markings; the larvae feed on milkweed
+cabbage_butterfly	white butterfly whose larvae (cabbageworms) feed on cabbage
+sulphur_butterfly, sulfur_butterfly	any of numerous yellow or orange butterflies
+lycaenid, lycaenid_butterfly	any of various butterflies of the family Lycaenidae
+starfish, sea_star	echinoderms characterized by five arms extending from a central disk
+sea_urchin	shallow-water echinoderms having soft bodies enclosed in thin spiny globular shells
+sea_cucumber, holothurian	echinoderm having a flexible sausage-shaped body, tentacles surrounding the mouth and tube feet; free-living mud feeders
+wood_rabbit, cottontail, cottontail_rabbit	common small rabbit of North America having greyish or brownish fur and a tail with a white underside; a host for Ixodes pacificus and Ixodes scapularis (Lyme disease ticks)
+hare	swift timid long-eared mammal larger than a rabbit having a divided upper lip and long hind legs; young born furred and with open eyes
+Angora, Angora_rabbit	domestic breed of rabbit with long white silky hair
+hamster	short-tailed Old World burrowing rodent with large cheek pouches
+porcupine, hedgehog	relatively large rodents with sharp erectile bristles mingled with the fur
+fox_squirrel, eastern_fox_squirrel, Sciurus_niger	exceptionally large arboreal squirrel of eastern United States
+marmot	stocky coarse-furred burrowing rodent with a short bushy tail found throughout the northern hemisphere; hibernates in winter
+beaver	large semiaquatic rodent with webbed hind feet and a broad flat tail; construct complex dams and underwater lodges
+guinea_pig, Cavia_cobaya	stout-bodied nearly tailless domesticated cavy; often kept as a pet and widely used in research
+sorrel	a horse of a brownish orange to light brown color
+zebra	any of several fleet black-and-white striped African equines
+hog, pig, grunter, squealer, Sus_scrofa	domestic swine
+wild_boar, boar, Sus_scrofa	Old World wild swine having a narrow body and prominent tusks from which most domestic swine come; introduced in United States
+warthog	African wild swine with warty protuberances on the face and large protruding tusks
+hippopotamus, hippo, river_horse, Hippopotamus_amphibius	massive thick-skinned herbivorous animal living in or around rivers of tropical Africa
+ox	an adult castrated bull of the genus Bos; especially Bos taurus
+water_buffalo, water_ox, Asiatic_buffalo, Bubalus_bubalis	an Asian buffalo that is often domesticated for use as a draft animal
+bison	any of several large humped bovids having shaggy manes and large heads and short horns
+ram, tup	uncastrated adult male sheep
+bighorn, bighorn_sheep, cimarron, Rocky_Mountain_bighorn, Rocky_Mountain_sheep, Ovis_canadensis	wild sheep of mountainous regions of western North America having massive curled horns
+ibex, Capra_ibex	wild goat of mountain areas of Eurasia and northern Africa having large recurved horns
+hartebeest	a large African antelope with lyre-shaped horns that curve backward
+impala, Aepyceros_melampus	African antelope with ridged curved horns; moves with enormous leaps
+gazelle	small swift graceful antelope of Africa and Asia having lustrous eyes
+Arabian_camel, dromedary, Camelus_dromedarius	one-humped camel of the hot deserts of northern Africa and southwestern Asia
+llama	wild or domesticated South American cud-chewing animal related to camels but smaller and lacking a hump
+weasel	small carnivorous mammal with short legs and elongated body and neck
+mink	slender-bodied semiaquatic mammal having partially webbed feet; valued for its fur
+polecat, fitch, foulmart, foumart, Mustela_putorius	dark brown mustelid of woodlands of Eurasia that gives off an unpleasant odor when threatened
+black-footed_ferret, ferret, Mustela_nigripes	musteline mammal of prairie regions of United States; nearly extinct
+otter	freshwater carnivorous mammal having webbed and clawed feet and dark brown fur
+skunk, polecat, wood_pussy	American musteline mammal typically ejecting an intensely malodorous fluid when startled; in some classifications put in a separate subfamily Mephitinae
+badger	sturdy carnivorous burrowing mammal with strong claws; widely distributed in the northern hemisphere
+armadillo	burrowing chiefly nocturnal mammal with body covered with strong horny plates
+three-toed_sloth, ai, Bradypus_tridactylus	a sloth that has three long claws on each forefoot and each hindfoot
+orangutan, orang, orangutang, Pongo_pygmaeus	large long-armed ape of Borneo and Sumatra having arboreal habits
+gorilla, Gorilla_gorilla	largest anthropoid ape; terrestrial and vegetarian; of forests of central west Africa
+chimpanzee, chimp, Pan_troglodytes	intelligent somewhat arboreal ape of equatorial African forests
+gibbon, Hylobates_lar	smallest and most perfectly anthropoid arboreal ape having long arms and no tail; of southern Asia and East Indies
+siamang, Hylobates_syndactylus, Symphalangus_syndactylus	large black gibbon of Sumatra having the 2nd and 3rd toes partially united by a web
+guenon, guenon_monkey	small slender African monkey having long hind limbs and tail and long hair around the face
+patas, hussar_monkey, Erythrocebus_patas	reddish long-tailed monkey of west Africa
+baboon	large terrestrial monkeys having doglike muzzles
+macaque	short-tailed monkey of rocky regions of Asia and Africa
+langur	slender long-tailed monkey of Asia
+colobus, colobus_monkey	arboreal monkey of western and central Africa with long silky fur and reduced thumbs
+proboscis_monkey, Nasalis_larvatus	Borneo monkey having a long bulbous nose
+marmoset	small soft-furred South American and Central American monkey with claws instead of nails
+capuchin, ringtail, Cebus_capucinus	monkey of Central America and South America having thick hair on the head that resembles a monk's cowl
+howler_monkey, howler	monkey of tropical South American forests having a loud howling cry
+titi, titi_monkey	small South American monkeys with long beautiful fur and long nonprehensile tail
+spider_monkey, Ateles_geoffroyi	arboreal monkey of tropical America with long slender legs and long prehensile tail
+squirrel_monkey, Saimiri_sciureus	small long-tailed monkey of Central American and South America with greenish fur and black muzzle
+Madagascar_cat, ring-tailed_lemur, Lemur_catta	small lemur having its tail barred with black
+indri, indris, Indri_indri, Indri_brevicaudatus	large short-tailed lemur of Madagascar having thick silky fur in black and white and fawn
+Indian_elephant, Elephas_maximus	Asian elephant having smaller ears and tusks primarily in the male
+African_elephant, Loxodonta_africana	an elephant native to Africa having enormous flapping ears and ivory tusks
+lesser_panda, red_panda, panda, bear_cat, cat_bear, Ailurus_fulgens	reddish-brown Old World raccoon-like carnivore; in some classifications considered unrelated to the giant pandas
+giant_panda, panda, panda_bear, coon_bear, Ailuropoda_melanoleuca	large black-and-white herbivorous mammal of bamboo forests of China and Tibet; in some classifications considered a member of the bear family or of a separate family Ailuropodidae
+barracouta, snoek	a large marine food fish common on the coasts of Australia, New Zealand, and southern Africa
+eel	voracious snakelike marine or freshwater fishes with smooth slimy usually scaleless skin and having a continuous vertical fin but no ventral fins
+coho, cohoe, coho_salmon, blue_jack, silver_salmon, Oncorhynchus_kisutch	small salmon of northern Pacific coasts and the Great Lakes
+rock_beauty, Holocanthus_tricolor	gold and black butterflyfish found from West Indies to Brazil
+anemone_fish	live associated with sea anemones
+sturgeon	large primitive fishes valued for their flesh and roe; widely distributed in the North Temperate Zone
+gar, garfish, garpike, billfish, Lepisosteus_osseus	primitive predaceous North American fish covered with hard scales and having long jaws with needlelike teeth
+lionfish	brightly striped fish of the tropical Pacific having elongated spiny fins
+puffer, pufferfish, blowfish, globefish	any of numerous marine fishes whose elongated spiny body can inflate itself with water or air to form a globe; several species contain a potent nerve poison; closely related to spiny puffers
+abacus	a calculator that performs arithmetic functions by manually sliding counters on rods or in grooves
+abaya	(Arabic) a loose black robe from head to toe; traditionally worn by Muslim women
+academic_gown, academic_robe, judge's_robe	a gown worn by academics or judges
+accordion, piano_accordion, squeeze_box	a portable box-shaped free-reed instrument; the reeds are made to vibrate by air from the bellows controlled by the player
+acoustic_guitar	sound is not amplified by electrical means
+aircraft_carrier, carrier, flattop, attack_aircraft_carrier	a large warship that carries planes and has a long flat deck for takeoffs and landings
+airliner	a commercial airplane that carries passengers
+airship, dirigible	a steerable self-propelled aircraft
+altar	a raised structure on which gifts or sacrifices to a god are made
+ambulance	a vehicle that takes people to and from hospitals
+amphibian, amphibious_vehicle	a flat-bottomed motor vehicle that can travel on land or water
+analog_clock	a clock that displays the time of day by the position of hands on a dial
+apiary, bee_house	a shed containing a number of beehives
+apron	a garment of cloth or leather or plastic that is tied about the waist and worn to protect your clothing
+ashcan, trash_can, garbage_can, wastebin, ash_bin, ash-bin, ashbin, dustbin, trash_barrel, trash_bin	a bin that holds rubbish until it is collected
+assault_rifle, assault_gun	any of the automatic rifles or semiautomatic rifles with large magazines designed for military use
+backpack, back_pack, knapsack, packsack, rucksack, haversack	a bag carried by a strap on your back or shoulder
+bakery, bakeshop, bakehouse	a workplace where baked goods (breads and cakes and pastries) are produced or sold
+balance_beam, beam	a gymnastic apparatus used by women gymnasts
+balloon	large tough nonrigid bag filled with gas or heated air
+ballpoint, ballpoint_pen, ballpen, Biro	a pen that has a small metal ball as the point of transfer of ink to paper
+Band_Aid	trade name for an adhesive bandage to cover small cuts or blisters
+banjo	a stringed instrument of the guitar family that has long neck and circular body
+bannister, banister, balustrade, balusters, handrail	a railing at the side of a staircase or balcony to prevent people from falling
+barbell	a bar to which heavy discs are attached at each end; used in weightlifting
+barber_chair	a large fixed adjustable chair in which barbers seat their customers
+barbershop	a shop where men can get their hair cut
+barn	an outlying farm building for storing grain or animal feed and housing farm animals
+barometer	an instrument that measures atmospheric pressure
+barrel, cask	a cylindrical container that holds liquids
+barrow, garden_cart, lawn_cart, wheelbarrow	a cart for carrying small loads; has handles and one or more wheels
+baseball	a ball used in playing baseball
+basketball	an inflated ball used in playing basketball
+bassinet	a basket (usually hooded) used as a baby's bed
+bassoon	a double-reed instrument; the tenor of the oboe family
+bathing_cap, swimming_cap	a tight-fitting cap that keeps hair dry while swimming
+bath_towel	a large towel; to dry yourself after a bath
+bathtub, bathing_tub, bath, tub	a relatively large open container that you fill with water and use to wash the body
+beach_wagon, station_wagon, wagon, estate_car, beach_waggon, station_waggon, waggon	a car that has a long body and rear door with space behind rear seat
+beacon, lighthouse, beacon_light, pharos	a tower with a light that gives warning of shoals to passing ships
+beaker	a flatbottomed jar made of glass or plastic; used for chemistry
+bearskin, busby, shako	tall hat; worn by some British soldiers on ceremonial occasions
+beer_bottle	a bottle that holds beer
+beer_glass	a relatively large glass for serving beer
+bell_cote, bell_cot	a small shelter for bells; has a gable or shed roof
+bib	top part of an apron; covering the chest
+bicycle-built-for-two, tandem_bicycle, tandem	a bicycle with two sets of pedals and two seats
+bikini, two-piece	a woman's very brief bathing suit
+binder, ring-binder	holds loose papers or magazines
+binoculars, field_glasses, opera_glasses	an optical instrument designed for simultaneous use by both eyes
+birdhouse	a shelter for birds
+boathouse	a shed at the edge of a river or lake; used to store boats
+bobsled, bobsleigh, bob	a long racing sled (for 2 or more people) with a steering mechanism
+bolo_tie, bolo, bola_tie, bola	a cord fastened around the neck with an ornamental clasp and worn as a necktie
+bonnet, poke_bonnet	a hat tied under the chin
+bookcase	a piece of furniture with shelves for storing books
+bookshop, bookstore, bookstall	a shop where books are sold
+bottlecap	a cap that seals a bottle
+bow	a weapon for shooting arrows, composed of a curved piece of resilient wood with a taut cord to propel the arrow
+bow_tie, bow-tie, bowtie	a man's tie that ties in a bow
+brass, memorial_tablet, plaque	a memorial made of brass
+brassiere, bra, bandeau	an undergarment worn by women to support their breasts
+breakwater, groin, groyne, mole, bulwark, seawall, jetty	a protective structure of stone or concrete; extends from shore into the water to prevent a beach from washing away
+breastplate, aegis, egis	armor plate that protects the chest; the front part of a cuirass
+broom	a cleaning implement for sweeping; bundle of straws or twigs attached to a long handle
+bucket, pail	a roughly cylindrical vessel that is open at the top
+buckle	fastener that fastens together two ends of a belt or strap; often has loose prong
+bulletproof_vest	a vest capable of resisting the impact of a bullet
+bullet_train, bullet	a high-speed passenger train
+butcher_shop, meat_market	a shop in which meat and poultry (and sometimes fish) are sold
+cab, hack, taxi, taxicab	a car driven by a person whose job is to take passengers where they want to go in exchange for money
+caldron, cauldron	a very large pot that is used for boiling
+candle, taper, wax_light	stick of wax with a wick in the middle
+cannon	heavy gun fired from a tank
+canoe	small and light boat; pointed at both ends; propelled with a paddle
+can_opener, tin_opener	a device for cutting cans open
+cardigan	knitted jacket that is fastened up the front with buttons or a zipper
+car_mirror	a mirror that the driver of a car can use
+carousel, carrousel, merry-go-round, roundabout, whirligig	a large, rotating machine with seats for children to ride or amusement
+carpenter's_kit, tool_kit	a set of carpenter's tools
+carton	a box made of cardboard; opens by flaps on top
+car_wheel	a wheel that has a tire and rim and hubcap; used to propel the car
+cash_machine, cash_dispenser, automated_teller_machine, automatic_teller_machine, automated_teller, automatic_teller, ATM	an unattended machine (outside some banks) that dispenses money when a personal coded card is used
+cassette	a container that holds a magnetic tape used for recording or playing sound or video
+cassette_player	electronic equipment for playing cassettes
+castle	a large building formerly occupied by a ruler and fortified against attack
+catamaran	a sailboat with two parallel hulls held together by single deck
+CD_player	a stand-alone piece of electronic equipment that either has its own display or attaches to a television set
+cello, violoncello	a large stringed instrument; seated player holds it upright while playing
+cellular_telephone, cellular_phone, cellphone, cell, mobile_phone	a hand-held mobile radiotelephone for use in an area divided into small sections, each with its own short-range transmitter/receiver
+chain	a series of (usually metal) rings or links fitted into one another to make a flexible ligament
+chainlink_fence	a fence of steel wires woven into a diamond pattern
+chain_mail, ring_mail, mail, chain_armor, chain_armour, ring_armor, ring_armour	(Middle Ages) flexible armor made of interlinked metal rings
+chain_saw, chainsaw	portable power saw; teeth linked to form an endless chain
+chest	box with a lid; used for storage; usually large and sturdy
+chiffonier, commode	a tall elegant chest of drawers
+chime, bell, gong	a percussion instrument consisting of a set of tuned bells that are struck with a hammer; used as an orchestral instrument
+china_cabinet, china_closet	a cabinet (usually with glass doors) for storing and displaying china
+Christmas_stocking	a stocking that is filled with small Christmas presents
+church, church_building	a place for public (especially Christian) worship
+cinema, movie_theater, movie_theatre, movie_house, picture_palace	a theater where films are shown
+cleaver, meat_cleaver, chopper	a butcher's knife having a large square blade
+cliff_dwelling	a rock and adobe dwelling built on sheltered ledges in the sides of a cliff
+cloak	anything that covers or conceals
+clog, geta, patten, sabot	footwear usually with wooden soles
+cocktail_shaker	a shaker for mixing cocktails
+coffee_mug	a mug intended for serving coffee
+coffeepot	tall pot in which coffee is brewed
+coil, spiral, volute, whorl, helix	a structure consisting of something wound in a continuous series of loops
+combination_lock	lock that can be opened only by turning dials in a special sequence
+computer_keyboard, keypad	a keyboard that is a data input device for computers; arrangement of keys is modelled after the typewriter keyboard
+confectionery, confectionary, candy_store	a confectioner's shop
+container_ship, containership, container_vessel	a cargo ship designed to hold containerized cargoes
+convertible	a car that has top that can be folded or removed
+corkscrew, bottle_screw	a bottle opener that pulls corks
+cornet, horn, trumpet, trump	a brass musical instrument with a brilliant tone; has a narrow tube and a flared bell and is played by means of valves
+cowboy_boot	a boot with a high arch and fancy stitching; worn by American cowboys
+cowboy_hat, ten-gallon_hat	a hat with a wide brim and a soft crown; worn by American ranch hands
+cradle	a baby bed with sides and rockers
+crane	lifts and moves heavy objects; lifting tackle is suspended from a pivoted boom that rotates around a vertical axis
+crash_helmet	a padded helmet worn by people riding bicycles or motorcycles; protects the head in case of accidents
+crate	a rugged box (usually made of wood); used for shipping
+crib, cot	baby bed with high sides made of slats
+Crock_Pot	an electric cooker that maintains a relatively low temperature
+croquet_ball	a wooden ball used in playing croquet
+crutch	a wooden or metal staff that fits under the armpit and reaches to the ground; used by disabled person while walking
+cuirass	medieval body armor that covers the chest and back
+dam, dike, dyke	a barrier constructed to contain the flow of water or to keep out the sea
+desk	a piece of furniture with a writing surface and usually drawers or other compartments
+desktop_computer	a personal computer small enough to fit conveniently in an individual workspace
+dial_telephone, dial_phone	a telephone with a dial for registering the number to be called
+diaper, nappy, napkin	garment consisting of a folded cloth drawn up between the legs and fastened at the waist; worn by infants to catch excrement
+digital_clock	a clock that displays the time of day digitally
+digital_watch	a watch with a digital display
+dining_table, board	a table at which meals are served
+dishrag, dishcloth	a cloth for washing dishes
+dishwasher, dish_washer, dishwashing_machine	a machine for washing dishes
+disk_brake, disc_brake	hydraulic brake in which friction is applied to both sides of a spinning disk by the brake pads
+dock, dockage, docking_facility	landing in a harbor next to a pier where ships are loaded and unloaded or repaired; may have gates to let water in or out
+dogsled, dog_sled, dog_sleigh	a sled pulled by dogs
+dome	a hemispherical roof
+doormat, welcome_mat	a mat placed outside an exterior door for wiping the shoes before entering
+drilling_platform, offshore_rig	drilling rig consisting of an offshore platform (floating or fixed to the sea bed) from which many oil wells can be bored radially
+drum, membranophone, tympan	a musical percussion instrument; usually consists of a hollow cylinder with a membrane stretched across each end
+drumstick	a stick used for playing a drum
+dumbbell	an exercising weight; two spheres connected by a short bar that serves as a handle
+Dutch_oven	an oven consisting of a metal box for cooking in front of a fire
+electric_fan, blower	a fan run by an electric motor
+electric_guitar	a guitar whose sound is amplified by electrical means
+electric_locomotive	a locomotive that is powered by an electric motor
+entertainment_center	a wall unit containing sound and television systems
+envelope	a flat (usually rectangular) container for a letter, thin package, etc.
+espresso_maker	a coffee maker that forces live steam under pressure through dark roasted coffee grounds
+face_powder	cosmetic powder for the face
+feather_boa, boa	a long thin fluffy scarf of feathers or fur
+file, file_cabinet, filing_cabinet	office furniture consisting of a container for keeping papers in order
+fireboat	a boat equipped to fight fires on ships or along a waterfront
+fire_engine, fire_truck	any of various large trucks that carry firemen and equipment to the site of a fire
+fire_screen, fireguard	a metal screen before an open fire for protection (especially against flying sparks)
+flagpole, flagstaff	a tall staff or pole on which a flag is raised
+flute, transverse_flute	a high-pitched woodwind instrument; a slender tube closed at one end with finger holes on one end and an opening near the closed end across which the breath is blown
+folding_chair	a chair that can be folded flat for storage
+football_helmet	a padded helmet with a face mask to protect the head of football players
+forklift	a small industrial vehicle with a power operated forked platform in front that can be inserted under loads to lift and move them
+fountain	a structure from which an artificially produced jet of water arises
+fountain_pen	a pen that is supplied with ink from a reservoir in its barrel
+four-poster	a bed with posts at the four corners that can be used to support a canopy or curtains
+freight_car	a railway car that carries freight
+French_horn, horn	a brass musical instrument consisting of a conical tube that is coiled into a spiral and played by means of valves
+frying_pan, frypan, skillet	a pan used for frying foods
+fur_coat	a coat made of fur
+garbage_truck, dustcart	a truck for collecting domestic refuse
+gasmask, respirator, gas_helmet	a protective mask with a filter; protects the face and lungs against poisonous gases
+gas_pump, gasoline_pump, petrol_pump, island_dispenser	a pump in a service station that draws gasoline from underground storage tanks
+goblet	a drinking glass with a base and stem
+go-kart	a small low motor vehicle with four wheels and an open framework; used for racing
+golf_ball	a small hard ball used in playing golf; dimpled to reduce wind resistance
+golfcart, golf_cart	a small motor vehicle in which golfers can ride between shots
+gondola	long narrow flat-bottomed boat propelled by sculling; traditionally used on canals of Venice
+gong, tam-tam	a percussion instrument consisting of a metal plate that is struck with a softheaded drumstick
+gown	a woman's dress, usually with a close-fitting bodice and a long flared skirt, often worn on formal occasions
+grand_piano, grand	a piano with the strings on a horizontal harp-shaped frame; usually supported by three legs
+greenhouse, nursery, glasshouse	a building with glass walls and roof; for the cultivation and exhibition of plants under controlled conditions
+grille, radiator_grille	grating that admits cooling air to car's radiator
+grocery_store, grocery, food_market, market	a marketplace where groceries are sold
+guillotine	instrument of execution that consists of a weighted blade between two vertical poles; used for beheading people
+hair_slide	a decorative hinged clip that girls and women put in their hair to hold it in place
+hair_spray	toiletry consisting of a commercial preparation that is sprayed on the hair to hold it in place
+half_track	a motor vehicle propelled by half tracks; frequently used by the military
+hammer	a hand tool with a heavy rigid head and a handle; used to deliver an impulsive force by striking
+hamper	a basket usually with a cover
+hand_blower, blow_dryer, blow_drier, hair_dryer, hair_drier	a hand-held electric blower that can blow warm air onto the hair; used for styling hair
+hand-held_computer, hand-held_microcomputer	a portable battery-powered computer small enough to be carried in your pocket
+handkerchief, hankie, hanky, hankey	a square piece of cloth used for wiping the eyes or nose or as a costume accessory
+hard_disc, hard_disk, fixed_disk	a rigid magnetic disk mounted permanently in a drive unit
+harmonica, mouth_organ, harp, mouth_harp	a small rectangular free-reed instrument having a row of free reeds set back in air holes and played by blowing into the desired hole
+harp	a chordophone that has a triangular frame consisting of a sounding board and a pillar and a curved neck; the strings stretched between the neck and the soundbox are plucked with the fingers
+harvester, reaper	farm machine that gathers a food crop from the fields
+hatchet	a small ax with a short handle used with one hand (usually to chop wood)
+holster	a sheath (usually leather) for carrying a handgun
+home_theater, home_theatre	television and video equipment designed to reproduce in the home the experience of being in a movie theater
+honeycomb	a framework of hexagonal cells resembling the honeycomb built by bees
+hook, claw	a mechanical device that is curved or bent to suspend or hold or pull something
+hoopskirt, crinoline	a skirt stiffened with hoops
+horizontal_bar, high_bar	gymnastic apparatus consisting of a bar supported in a horizontal position by uprights at both ends
+horse_cart, horse-cart	heavy cart; drawn by a horse; used for farm work
+hourglass	a sandglass that runs for sixty minutes
+iPod	(trademark) a pocket-sized device used to play music files
+iron, smoothing_iron	home appliance consisting of a flat metal base that is heated and used to smooth cloth
+jack-o'-lantern	lantern carved from a pumpkin
+jean, blue_jean, denim	(usually plural) close-fitting trousers of heavy denim for manual work or casual wear
+jeep, landrover	a car suitable for traveling over rough terrain
+jersey, T-shirt, tee_shirt	a close-fitting pullover shirt
+jigsaw_puzzle	a puzzle that requires you to reassemble a picture that has been mounted on a stiff base and cut into interlocking pieces
+jinrikisha, ricksha, rickshaw	a small two-wheeled cart for one passenger; pulled by one person
+joystick	a manual control consisting of a vertical handle that can move freely in two directions; used as an input device to computers or to devices controlled by computers
+kimono	a loose robe; imitated from robes originally worn by Japanese
+knee_pad	protective garment consisting of a pad worn by football or baseball or hockey players
+knot	any of various fastenings formed by looping and tying a rope (or cord) upon itself or to another rope or to another object
+lab_coat, laboratory_coat	a light coat worn to protect clothing from substances used while working in a laboratory
+ladle	a spoon-shaped vessel with a long handle; frequently used to transfer liquids from one container to another
+lampshade, lamp_shade	a protective ornamental shade used to screen a light bulb from direct view
+laptop, laptop_computer	a portable computer small enough to use in your lap
+lawn_mower, mower	garden tool for mowing grass on lawns
+lens_cap, lens_cover	cap used to keep lens free of dust when not in use
+letter_opener, paper_knife, paperknife	dull knife used to cut open the envelopes in which letters are mailed or to slit uncut pages of books
+library	a building that houses a collection of books and other materials
+lifeboat	a strong sea boat designed to rescue people from a sinking ship
+lighter, light, igniter, ignitor	a device for lighting or igniting fuel or charges or fires
+limousine, limo	large luxurious car; usually driven by a chauffeur
+liner, ocean_liner	a large commercial ship (especially one that carries passengers on a regular schedule)
+lipstick, lip_rouge	makeup that is used to color the lips
+Loafer	a low leather step-in shoe; the top resembles a moccasin but it has a broad flat heel
+lotion	any of various cosmetic preparations that are applied to the skin
+loudspeaker, speaker, speaker_unit, loudspeaker_system, speaker_system	electro-acoustic transducer that converts electrical signals into sounds loud enough to be heard at a distance
+loupe, jeweler's_loupe	small magnifying glass (usually set in an eyepiece) used by jewelers and horologists
+lumbermill, sawmill	a mill for dressing logs and lumber
+magnetic_compass	compass based on an indicator (as a magnetic needle) that points to the magnetic north
+mailbag, postbag	letter carrier's shoulder bag
+mailbox, letter_box	a private box for delivery of mail
+maillot	tights for dancers or gymnasts
+maillot, tank_suit	a woman's one-piece bathing suit
+manhole_cover	a flush iron cover for a manhole (as in a street)
+maraca	a percussion instrument consisting of a hollow gourd containing pebbles or beans; often played in pairs
+marimba, xylophone	a percussion instrument with wooden bars tuned to produce a chromatic scale and with resonators; played with small mallets
+mask	a covering to disguise or conceal the face
+matchstick	a short thin stick of wood used in making matches
+maypole	a vertical pole or post decorated with streamers that can be held by dancers celebrating May Day
+maze, labyrinth	complex system of paths or tunnels in which it is easy to get lost
+measuring_cup	graduated cup used to measure liquid or granular ingredients
+medicine_chest, medicine_cabinet	cabinet that holds medicines and toiletries
+megalith, megalithic_structure	memorial consisting of a very large stone forming part of a prehistoric structure (especially in western Europe)
+microphone, mike	device for converting sound waves into electrical energy
+microwave, microwave_oven	kitchen appliance that cooks food by passing an electromagnetic wave through it; heat results from the absorption of energy by the water molecules in the food
+military_uniform	prescribed identifying uniform for soldiers
+milk_can	large can for transporting milk
+minibus	a light bus (4 to 10 passengers)
+miniskirt, mini	a very short skirt
+minivan	a small box-shaped passenger van; usually has removable seats; used as a family car
+missile	a rocket carrying a warhead of conventional or nuclear explosives; may be ballistic or directed by remote control
+mitten	glove that encases the thumb separately and the other four fingers together
+mixing_bowl	bowl used with an electric mixer
+mobile_home, manufactured_home	a large house trailer that can be connected to utilities and can be parked in one place and used as permanent housing
+Model_T	the first widely available automobile powered by a gasoline engine; mass-produced by Henry Ford from 1908 to 1927
+modem	(from a combination of MOdulate and DEModulate) electronic equipment consisting of a device used to connect computers by a telephone line
+monastery	the residence of a religious community
+monitor	electronic equipment that is used to check the quality or content of electronic transmissions
+moped	a motorbike that can be pedaled or driven by a low-powered gasoline engine
+mortar	a bowl-shaped vessel in which substances can be ground and mixed with a pestle
+mortarboard	an academic cap with a flat square with a tassel on top
+mosque	(Islam) a Muslim place of worship that usually has a minaret
+mosquito_net	a fine net or screen (especially around beds) to protect against mosquitos
+motor_scooter, scooter	a wheeled vehicle with small wheels and a low-powered gasoline engine geared to the rear wheel
+mountain_bike, all-terrain_bike, off-roader	a bicycle with a sturdy frame and fat tires; originally designed for riding in mountainous country
+mountain_tent	a lightweight tent with a floor; flaps close with a zipper
+mouse, computer_mouse	a hand-operated electronic device that controls the coordinates of a cursor on your computer screen as you move it around on a pad; on the bottom of the device is a ball that rolls on the surface of the pad
+mousetrap	a trap for catching mice
+moving_van	a van used for moving home or office furniture
+muzzle	a leather or wire restraint that fits over an animal's snout (especially a dog's nose and jaws) and prevents it from eating or biting
+nail	a thin pointed piece of metal that is hammered into materials as a fastener
+neck_brace	a brace worn to steady the neck
+necklace	jewelry consisting of a cord or chain (often bearing gems) worn about the neck as an ornament (especially by women)
+nipple	a flexible cap on a baby's feeding bottle or pacifier
+notebook, notebook_computer	a small compact portable computer
+obelisk	a stone pillar having a rectangular cross section tapering towards a pyramidal top
+oboe, hautboy, hautbois	a slender double-reed instrument; a woodwind with a conical bore and a double-reed mouthpiece
+ocarina, sweet_potato	egg-shaped terra cotta wind instrument with a mouthpiece and finger holes
+odometer, hodometer, mileometer, milometer	a meter that shows mileage traversed
+oil_filter	a filter that removes impurities from the oil used to lubricate an internal-combustion engine
+organ, pipe_organ	wind instrument whose sound is produced by means of pipes arranged in sets supplied with air from a bellows and controlled from a large complex musical keyboard
+oscilloscope, scope, cathode-ray_oscilloscope, CRO	electronic equipment that provides visual images of varying electrical quantities
+overskirt	an outer skirt worn over another skirt
+oxcart	a cart that is drawn by an ox
+oxygen_mask	a breathing device that is placed over the mouth and nose; supplies oxygen from an attached storage tank
+packet	a small package or bundle
+paddle, boat_paddle	a short light oar used without an oarlock to propel a canoe or small boat
+paddlewheel, paddle_wheel	a large wheel fitted with paddles and driven by an engine in order to propel a boat
+padlock	a detachable lock; has a hinged shackle that can be passed through the staple of a hasp or the links in a chain and then snapped shut
+paintbrush	a brush used as an applicator (to apply paint)
+pajama, pyjama, pj's, jammies	(usually plural) loose-fitting nightclothes worn for sleeping or lounging; have a jacket top and trousers
+palace	official residence of an exalted person (as a sovereign)
+panpipe, pandean_pipe, syrinx	a primitive wind instrument consisting of several parallel pipes bound together
+paper_towel	a disposable towel made of absorbent paper
+parachute, chute	rescue equipment consisting of a device that fills with air and retards your fall
+parallel_bars, bars	gymnastic apparatus consisting of two parallel wooden rods supported on uprights
+park_bench	a bench in a public park
+parking_meter	a coin-operated timer located next to a parking space; depositing money into it entitles you to park your car there for a specified length of time
+passenger_car, coach, carriage	a railcar where passengers ride
+patio, terrace	usually paved outdoor area adjoining a residence
+pay-phone, pay-station	a coin-operated telephone
+pedestal, plinth, footstall	an architectural support or base (as for a column or statue)
+pencil_box, pencil_case	a box for holding pencils
+pencil_sharpener	a rotary implement for sharpening the point on pencils
+perfume, essence	a toiletry that emits and diffuses a fragrant odor
+Petri_dish	a shallow dish used to culture bacteria
+photocopier	a copier that uses photographic methods of making copies
+pick, plectrum, plectron	a small thin device (of metal or plastic or ivory) used to pluck a stringed instrument
+pickelhaube	a spiked helmet worn by German soldiers
+picket_fence, paling	a fence made of upright pickets
+pickup, pickup_truck	a light truck with an open body and low sides and a tailboard
+pier	a support for two adjacent bridge spans
+piggy_bank, penny_bank	a child's coin bank (often shaped like a pig)
+pill_bottle	a small bottle for holding pills
+pillow	a cushion to support the head of a sleeping person
+ping-pong_ball	light hollow ball used in playing table tennis
+pinwheel	a wheel that has numerous pins that are set at right angles to its rim
+pirate, pirate_ship	a ship that is manned by pirates
+pitcher, ewer	an open vessel with a handle and a spout for pouring
+plane, carpenter's_plane, woodworking_plane	a carpenter's hand tool with an adjustable blade for smoothing or shaping wood
+planetarium	a building housing an instrument for projecting the positions of the planets onto a domed ceiling
+plastic_bag	a bag made of thin plastic material
+plate_rack	a rack for holding plates to dry after they have been washed
+plow, plough	a farm tool having one or more heavy blades to break the soil and cut a furrow prior to sowing
+plunger, plumber's_helper	hand tool consisting of a stick with a rubber suction cup at one end; used to clean clogged drains
+Polaroid_camera, Polaroid_Land_camera	a camera that develops and produces a positive print within seconds
+pole	a long (usually round) rod of wood or metal or plastic
+police_van, police_wagon, paddy_wagon, patrol_wagon, wagon, black_Maria	van used by police to transport prisoners
+poncho	a blanket-like cloak with a hole in the center for the head
+pool_table, billiard_table, snooker_table	game equipment consisting of a heavy table on which pool is played
+pop_bottle, soda_bottle	a bottle for holding soft drinks
+pot, flowerpot	a container in which plants are cultivated
+potter's_wheel	a horizontal rotating wheel holding the clay being shaped by a potter
+power_drill	a power tool for drilling holes into hard materials
+prayer_rug, prayer_mat	a small rug used by Muslims during their devotions
+printer	(computer science) an output device that prints the results of data processing
+prison, prison_house	a correctional institution where persons are confined while on trial or for punishment
+projectile, missile	a weapon that is forcibly thrown or projected at a targets but is not self-propelled
+projector	an optical instrument that projects an enlarged image onto a screen
+puck, hockey_puck	a vulcanized rubber disk 3 inches in diameter that is used instead of a ball in ice hockey
+punching_bag, punch_bag, punching_ball, punchball	an inflated ball or bag that is suspended and punched for training in boxing
+purse	a small bag for carrying money
+quill, quill_pen	pen made from a bird's feather
+quilt, comforter, comfort, puff	bedding made of two layers of cloth filled with stuffing and stitched together
+racer, race_car, racing_car	a fast car that competes in races
+racket, racquet	a sports implement (usually consisting of a handle and an oval frame with a tightly interlaced network of strings) used to strike a ball (or shuttlecock) in various games
+radiator	a mechanism consisting of a metal honeycomb through which hot fluids circulate; heat is transferred from the fluid through the honeycomb to the airstream that is created either by the motion of the vehicle or by a fan
+radio, wireless	a communication system based on broadcasting electromagnetic waves
+radio_telescope, radio_reflector	astronomical telescope that picks up electromagnetic radiations in the radio-frequency range from extraterrestrial sources
+rain_barrel	a barrel used as a cistern to hold rainwater
+recreational_vehicle, RV, R.V.	a motorized wheeled vehicle used for camping or other recreational activities
+reel	winder consisting of a revolving spool with a handle; attached to a fishing rod
+reflex_camera	camera that allows the photographer to view and focus the exact scene being photographed
+refrigerator, icebox	white goods in which food can be stored at low temperatures
+remote_control, remote	a device that can be used to control a machine or apparatus from a distance
+restaurant, eating_house, eating_place, eatery	a building where people go to eat
+revolver, six-gun, six-shooter	a pistol with a revolving cylinder (usually having six chambers for bullets)
+rifle	a shoulder firearm with a long barrel and a rifled bore
+rocking_chair, rocker	a chair mounted on rockers
+rotisserie	an oven or broiler equipped with a rotating spit on which meat cooks as it turns
+rubber_eraser, rubber, pencil_eraser	an eraser made of rubber (or of a synthetic material with properties similar to rubber); commonly mounted at one end of a pencil
+rugby_ball	inflated oval ball used in playing rugby
+rule, ruler	measuring stick consisting of a strip of wood or metal or plastic with a straight edge that is used for drawing straight lines and measuring lengths
+running_shoe	a light comfortable shoe designed for running
+safe	strongbox where valuables can be safely kept
+safety_pin	a pin in the form of a clasp; has a guard so the point of the pin will not stick the user
+saltshaker, salt_shaker	a shaker with a perforated top for sprinkling salt
+sandal	a shoe consisting of a sole fastened by straps to the foot
+sarong	a loose skirt consisting of brightly colored fabric wrapped around the body; worn by both women and men in the South Pacific
+sax, saxophone	a single-reed woodwind with a conical bore
+scabbard	a sheath for a sword or dagger or bayonet
+scale, weighing_machine	a measuring instrument for weighing; shows amount of mass
+school_bus	a bus used to transport children to or from school
+schooner	sailing vessel used in former times
+scoreboard	a large board for displaying the score of a contest (and some other information)
+screen, CRT_screen	the display that is electronically created on the surface of the large end of a cathode-ray tube
+screw	a fastener with a tapered threaded shank and a slotted head
+screwdriver	a hand tool for driving screws; has a tip that fits into the head of a screw
+seat_belt, seatbelt	a safety belt used in a car or plane to hold you in your seat in case of an accident
+sewing_machine	a textile machine used as a home appliance for sewing
+shield, buckler	armor carried on the arm to intercept blows
+shoe_shop, shoe-shop, shoe_store	a shop where shoes are sold
+shoji	a translucent screen made of a wooden frame covered with rice paper
+shopping_basket	a handbasket used to carry goods while shopping
+shopping_cart	a handcart that holds groceries or other goods while shopping
+shovel	a hand tool for lifting loose material; consists of a curved container or scoop and a handle
+shower_cap	a tight cap worn to keep hair dry while showering
+shower_curtain	a curtain that keeps water from splashing out of the shower area
+ski	narrow wood or metal or plastic runners used in pairs for gliding over snow
+ski_mask	a woolen face mask to protect the face from cold while skiing on snow
+sleeping_bag	large padded bag designed to be slept in outdoors; usually rolls up like a bedroll
+slide_rule, slipstick	analog computer consisting of a handheld instrument used for rapid calculations; have been replaced by pocket calculators
+sliding_door	a door that opens by sliding instead of swinging
+slot, one-armed_bandit	a slot machine that is used for gambling
+snorkel	breathing device consisting of a bent tube fitting into a swimmer's mouth and extending above the surface; allows swimmer to breathe while face down in the water
+snowmobile	tracked vehicle for travel on snow having skis in front
+snowplow, snowplough	a vehicle used to push snow from roads
+soap_dispenser	dispenser of liquid soap
+soccer_ball	an inflated ball used in playing soccer
+sock	hosiery consisting of a cloth covering for the foot; worn inside the shoe; reaches to between the ankle and the knee
+solar_dish, solar_collector, solar_furnace	a concave mirror that concentrates the rays of the sun; can produce high temperatures
+sombrero	a straw hat with a tall crown and broad brim; worn in American southwest and in Mexico
+soup_bowl	a bowl for serving soup
+space_bar	the bar-shaped typewriter key that introduces spaces when used
+space_heater	heater consisting of a self-contained (usually portable) unit to warm a room
+space_shuttle	a reusable spacecraft with wings for a controlled descent through the Earth's atmosphere
+spatula	a turner with a narrow flexible blade
+speedboat	a fast motorboat
+spider_web, spider's_web	a web resembling the webs spun by spiders
+spindle	a stick or pin used to twist the yarn in spinning
+sports_car, sport_car	a small low car with a high-powered engine; usually seats two persons
+spotlight, spot	a lamp that produces a strong beam of light to illuminate a restricted area; used to focus attention of a stage performer
+stage	a large platform on which people can stand and can be seen by an audience
+steam_locomotive	a locomotive powered by a steam engine
+steel_arch_bridge	a steel bridge constructed in the form of an arch
+steel_drum	a concave percussion instrument made from the metal top of an oil drum; has an array of flattened areas that produce different tones when struck (of Caribbean origin)
+stethoscope	a medical instrument for listening to the sounds generated inside the body
+stole	a wide scarf worn about their shoulders by women
+stone_wall	a fence built of rough stones; used to separate fields
+stopwatch, stop_watch	a timepiece that can be started or stopped for exact timing (as of a race)
+stove	any heating apparatus
+strainer	a filter to retain larger pieces while smaller pieces and liquids pass through
+streetcar, tram, tramcar, trolley, trolley_car	a wheeled vehicle that runs on rails and is propelled by electricity
+stretcher	a litter for transporting people who are ill or wounded or dead; usually consists of a sheet of canvas stretched between two poles
+studio_couch, day_bed	convertible consisting of an upholstered couch that can be converted into a double bed
+stupa, tope	a dome-shaped shrine erected by Buddhists
+submarine, pigboat, sub, U-boat	a submersible warship usually armed with torpedoes
+suit, suit_of_clothes	a set of garments (usually including a jacket and trousers or skirt) for outerwear all of the same fabric and color
+sundial	timepiece that indicates the daylight hours by the shadow that the gnomon casts on a calibrated dial
+sunglass	a convex lens that focuses the rays of the sun; used to start a fire
+sunglasses, dark_glasses, shades	spectacles that are darkened or polarized to protect the eyes from the glare of the sun
+sunscreen, sunblock, sun_blocker	a cream spread on the skin; contains a chemical (as PABA) to filter out ultraviolet light and so protect from sunburn
+suspension_bridge	a bridge that has a roadway supported by cables that are anchored at both ends
+swab, swob, mop	cleaning implement consisting of absorbent material fastened to a handle; for cleaning floors
+sweatshirt	cotton knit pullover with long sleeves worn during athletic activity
+swimming_trunks, bathing_trunks	swimsuit worn by men while swimming
+swing	mechanical device used as a plaything to support someone swinging back and forth
+switch, electric_switch, electrical_switch	control consisting of a mechanical or electrical or electronic device for making or breaking or changing the connections in a circuit
+syringe	a medical instrument used to inject or withdraw fluids
+table_lamp	a lamp that sits on a table
+tank, army_tank, armored_combat_vehicle, armoured_combat_vehicle	an enclosed armored military vehicle; has a cannon and moves on caterpillar treads
+tape_player	electronic equipment for playing back magnetic tapes
+teapot	pot for brewing tea; usually has a spout and handle
+chemise, shimmy, shift, slip, teddy	a woman's sleeveless undergarment
+television, television_system	a telecommunication system that transmits images of objects (stationary or moving) between distant points
+tennis_ball	ball about the size of a fist used in playing tennis
+thatch, thatched_roof	a house roof made with a plant material (as straw)
+theater_curtain, theatre_curtain	a hanging cloth that conceals the stage from the view of the audience; rises or parts at the beginning and descends or closes between acts and at the end of a performance
+thimble	a small metal cap to protect the finger while sewing; can be used as a small container
+thresher, thrasher, threshing_machine	a farm machine for separating seeds or grain from the husks and straw
+throne	the chair of state for a monarch, bishop, etc.
+tile_roof	a roof made of fired clay tiles
+toaster	a kitchen appliance (usually electric) for toasting bread
+tobacco_shop, tobacconist_shop, tobacconist	a shop that sells pipes and pipe tobacco and cigars and cigarettes
+toilet_seat	the hinged seat on a toilet
+torch	a light usually carried in the hand; consists of some flammable substance
+totem_pole	a tribal emblem consisting of a pillar carved and painted with totemic figures; erected by Indian tribes of the northwest Pacific coast
+tow_truck, tow_car, wrecker	a truck equipped to hoist and pull wrecked cars (or to remove cars from no-parking zones)
+toyshop	shop where toys are sold
+tractor	a wheeled vehicle with large wheels; used in farming and other applications
+trailer_truck, tractor_trailer, trucking_rig, rig, articulated_lorry, semi	a truck consisting of a tractor and trailer together
+tray	an open receptacle for holding or displaying or serving articles or food
+trench_coat	a military style raincoat; belted with deep pockets
+tricycle, trike, velocipede	a vehicle with three wheels that is moved by foot pedals
+trimaran	a fast sailboat with 3 parallel hulls
+tripod	a three-legged rack used for support
+triumphal_arch	a monumental archway; usually they are built to commemorate some notable victory
+trolleybus, trolley_coach, trackless_trolley	a passenger bus with an electric motor that draws power from overhead wires
+trombone	a brass instrument consisting of a long tube whose length can be varied by a U-shaped slide
+tub, vat	a large open vessel for holding or storing liquids
+turnstile	a gate consisting of a post that acts as a pivot for rotating arms; set in a passageway for controlling the persons entering
+typewriter_keyboard	a keyboard for manually entering characters to be printed
+umbrella	a lightweight handheld collapsible canopy
+unicycle, monocycle	a vehicle with a single wheel that is driven by pedals
+upright, upright_piano	a piano with a vertical sounding board
+vacuum, vacuum_cleaner	an electrical home appliance that cleans by suction
+vase	an open jar of glass or porcelain used as an ornament or to hold flowers
+vault	an arched brick or stone ceiling or roof
+velvet	a silky densely piled fabric with a plain back
+vending_machine	a slot machine for selling goods
+vestment	gown (especially ceremonial garments) worn by the clergy
+viaduct	bridge consisting of a series of arches supported by piers used to carry a road (or railroad) over a valley
+violin, fiddle	bowed stringed instrument that is the highest member of the violin family; this instrument has four strings and a hollow body and an unfretted fingerboard and is played with a bow
+volleyball	an inflated ball used in playing volleyball
+waffle_iron	a kitchen appliance for baking waffles; the appliance usually consists of two indented metal pans hinged together so that they create a pattern on the waffle
+wall_clock	a clock mounted on a wall
+wallet, billfold, notecase, pocketbook	a pocket-size case for holding papers and paper money
+wardrobe, closet, press	a tall piece of furniture that provides storage space for clothes; has a door and rails or hooks for hanging clothes
+warplane, military_plane	an aircraft designed and used for combat
+washbasin, handbasin, washbowl, lavabo, wash-hand_basin	a basin for washing the hands (`wash-hand basin' is a British expression)
+washer, automatic_washer, washing_machine	a home appliance for washing clothes and linens automatically
+water_bottle	a bottle for holding water
+water_jug	a jug that holds water
+water_tower	a large reservoir for water
+whiskey_jug	a jug that contains whiskey
+whistle	acoustic device that forces air or steam against an edge or into a cavity and so produces a loud shrill sound
+wig	hairpiece covering the head and made of real or synthetic hair
+window_screen	screen to keep insects from entering a building through the open window
+window_shade	an opaque window blind that can cover or uncover a window
+Windsor_tie	a wide necktie worn in a loose bow
+wine_bottle	a bottle for holding wine
+wing	one of the horizontal airfoils on either side of the fuselage of an airplane
+wok	pan with a convex bottom; used for frying in Chinese cooking
+wooden_spoon	a spoon made of wood
+wool, woolen, woollen	a fabric made from the hair of sheep
+worm_fence, snake_fence, snake-rail_fence, Virginia_fence	rail fence consisting of a zigzag of interlocking rails
+wreck	a ship that has been destroyed at sea
+yawl	a ship's small boat (usually rowed by 4 or 6 oars)
+yurt	a circular domed dwelling that is portable and self-supporting; originally used by nomadic Mongol and Turkic people of central Asia but now used as inexpensive alternative or temporary housing
+web_site, website, internet_site, site	a computer connected to the internet that maintains a series of web pages on the World Wide Web
+comic_book	a magazine devoted to comic strips
+crossword_puzzle, crossword	a puzzle in which words corresponding to numbered clues are to be found and written in to squares in the puzzle
+street_sign	a sign visible from the street
+traffic_light, traffic_signal, stoplight	a visual signal to control the flow of traffic at intersections
+book_jacket, dust_cover, dust_jacket, dust_wrapper	a paper jacket for a book; a jacket on which promotional information is usually printed
+menu	the dishes making up a meal
+plate	a main course served on a plate
+guacamole	a dip made of mashed avocado mixed with chopped onions and other seasonings
+consomme	clear soup usually of beef or veal or chicken
+hot_pot, hotpot	a stew of meat and potatoes cooked in a tightly covered pot
+trifle	a cold pudding made of layers of sponge cake spread with fruit or jelly; may be decorated with nuts, cream, or chocolate
+ice_cream, icecream	frozen dessert containing cream and sugar and flavoring
+ice_lolly, lolly, lollipop, popsicle	ice cream or water ice on a small wooden stick
+French_loaf	a loaf of French bread
+bagel, beigel	(Yiddish) glazed yeast-raised doughnut-shaped roll with hard crust
+pretzel	glazed and salted cracker typically in the shape of a loose knot
+cheeseburger	a hamburger with melted cheese on it
+hotdog, hot_dog, red_hot	a frankfurter served hot on a bun
+mashed_potato	potato that has been peeled and boiled and then mashed
+head_cabbage	any of several varieties of cabbage having a large compact globular head; may be steamed or boiled or stir-fried or used raw in coleslaw
+broccoli	branched green undeveloped flower heads
+cauliflower	compact head of white undeveloped flowers
+zucchini, courgette	small cucumber-shaped vegetable marrow; typically dark green
+spaghetti_squash	medium-sized oval squash with flesh in the form of strings that resemble spaghetti
+acorn_squash	small dark green or yellow ribbed squash with yellow to orange flesh
+butternut_squash	buff-colored squash with a long usually straight neck and sweet orange flesh
+cucumber, cuke	cylindrical green fruit with thin green rind and white flesh eaten as a vegetable; related to melons
+artichoke, globe_artichoke	a thistlelike flower head with edible fleshy leaves and heart
+bell_pepper	large bell-shaped sweet pepper in green or red or yellow or orange or black varieties
+cardoon	only parts eaten are roots and especially stalks (blanched and used as celery); related to artichokes
+mushroom	fleshy body of any of numerous edible fungi
+Granny_Smith	apple with a green skin and hard tart flesh
+strawberry	sweet fleshy red fruit
+orange	round yellow to orange fruit of any of several citrus trees
+lemon	yellow oval fruit with juicy acidic flesh
+fig	fleshy sweet pear-shaped yellowish or purple multiple fruit eaten fresh or preserved or dried
+pineapple, ananas	large sweet fleshy tropical fruit with a terminal tuft of stiff leaves; widely cultivated
+banana	elongated crescent-shaped yellow fruit with soft sweet flesh
+jackfruit, jak, jack	immense East Indian fruit resembling breadfruit; it contains an edible pulp and nutritious seeds that are commonly roasted
+custard_apple	the fruit of any of several tropical American trees of the genus Annona having soft edible pulp
+pomegranate	large globular fruit having many seeds with juicy red pulp in a tough brownish-red rind
+hay	grass mowed and cured for use as fodder
+carbonara	sauce for pasta; contains eggs and bacon or ham and grated cheese
+chocolate_sauce, chocolate_syrup	sauce made with unsweetened chocolate or cocoa and sugar and water
+dough	a flour mixture stiff enough to knead or roll
+meat_loaf, meatloaf	a baked loaf of ground meat
+pizza, pizza_pie	Italian open pie made of thin bread dough spread with a spiced mixture of e.g. tomato sauce and cheese
+potpie	deep-dish meat and vegetable pie or a meat stew with dumplings
+burrito	a flour tortilla folded around a filling
+red_wine	wine having a red color derived from skins of dark-colored grapes
+espresso	strong black coffee brewed by forcing hot water under pressure through finely ground coffee beans
+cup	a punch served in a pitcher instead of a punch bowl
+eggnog	a punch made of sweetened milk or cream mixed with eggs and usually alcoholic liquor
+alp	any high mountain
+bubble	a hollow globule of gas (e.g., air or carbon dioxide)
+cliff, drop, drop-off	a steep high face of rock
+coral_reef	a reef consisting of coral consolidated into limestone
+geyser	a spring that discharges hot water and steam
+lakeside, lakeshore	the shore of a lake
+promontory, headland, head, foreland	a natural elevation (especially a rocky one that juts out into the sea)
+sandbar, sand_bar	a bar of sand
+seashore, coast, seacoast, sea-coast	the shore of a sea or ocean
+valley, vale	a long depression in the surface of the land that usually contains a river
+volcano	a mountain formed by volcanic material
+ballplayer, baseball_player	an athlete who plays baseball
+groom, bridegroom	a man participant in his own marriage ceremony
+scuba_diver	an underwater diver who uses scuba gear
+rapeseed	seed of rape plants; source of an edible oil
+daisy	any of numerous composite plants having flower heads with well-developed ray flowers usually arranged in a single whorl
+yellow_lady's_slipper, yellow_lady-slipper, Cypripedium_calceolus, Cypripedium_parviflorum	maroon to purple-brown orchid with yellow lip; Europe, North America and Japan
+corn	the dried grains or kernels or corn used as animal feed or ground for meal
+acorn	fruit of the oak tree: a smooth thin-walled nut in a woody cup-shaped base
+hip, rose_hip, rosehip	the fruit of a rose plant
+buckeye, horse_chestnut, conker	the inedible nutlike seed of the horse chestnut
+coral_fungus	any of numerous fungi of the family Clavariaceae often brightly colored that grow in often intricately branched clusters like coral
+agaric	a saprophytic fungus of the order Agaricales having an umbrellalike cap with gills on the underside
+gyromitra	any fungus of the genus Gyromitra
+stinkhorn, carrion_fungus	any of various ill-smelling brown-capped fungi of the order Phallales
+earthstar	any fungus of the family Geastraceae; in form suggesting a puffball whose outer peridium splits into the shape of a star
+hen-of-the-woods, hen_of_the_woods, Polyporus_frondosus, Grifola_frondosa	large greyish-brown edible fungus forming a mass of overlapping caps that somewhat resembles a hen at the base of trees
+bolete	any fungus of the family Boletaceae
+ear, spike, capitulum	fruiting spike of a cereal plant especially corn
+toilet_tissue, toilet_paper, bathroom_tissue	a soft thin absorbent paper for use in toilets

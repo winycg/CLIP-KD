@@ -28,16 +28,19 @@ except ImportError:
 
 from open_clip import tokenize
 from open_clip.tokenizer import HFTokenizer
-
+from .imagenet_zeroshot_data import openai_imagenet_template
+from .class_sampler import MPerClassSampler
 
 class CsvDataset(Dataset):
-    def __init__(self, input_filename, transforms, img_key, caption_key, sep="\t", tokenizer=None):
+    def __init__(self, data_root, input_filename, transforms, img_key, caption_key, sep="\t", tokenizer=None):
         logging.debug(f'Loading csv data from {input_filename}.')
         df = pd.read_csv(input_filename, sep=sep)
 
         self.images = df[img_key].tolist()
         self.captions = df[caption_key].tolist()
         self.transforms = transforms
+        self.root = data_root
+        
         logging.debug('Done loading data.')
 
         self.tokenize = tokenizer
@@ -46,9 +49,137 @@ class CsvDataset(Dataset):
         return len(self.captions)
 
     def __getitem__(self, idx):
-        images = self.transforms(Image.open(str(self.images[idx])))
+        img_path = os.path.join(self.root, str(self.images[idx]))
+        image_file = Image.open(img_path)
+        images = self.transforms(image_file)
         texts = self.tokenize([str(self.captions[idx])])[0]
         return images, texts
+
+
+class ImageNetCsvDataset(Dataset):
+    def __init__(self, data_root, input_filename, transforms, img_key, caption_key, sep="\t", tokenizer=None):
+        logging.debug(f'Loading csv data from {input_filename}.')
+        df = pd.read_csv(input_filename, sep=sep)
+
+        self.images = df[img_key].tolist()
+        self.captions = df[caption_key].tolist()
+        self.class_name = df['class'].tolist()
+
+        self.labels = []
+        count = 0
+        start_label =  self.class_name[0]
+        for c in self.class_name:
+            if c == start_label:
+                self.labels.append(count)
+            else:
+                count += 1
+                self.labels.append(count)
+                start_label = c
+        self.labels = np.array(self.labels)
+        self.imagenet_templates = openai_imagenet_template
+        self.imagenet_templates_num = len(openai_imagenet_template)
+        self.transforms = transforms
+        logging.debug('Done loading data.')
+
+        self.root = data_root
+        self.tokenize = tokenizer
+
+    def __len__(self):
+        return len(self.captions)
+
+    def __getitem__(self, idx):
+        img_path = os.path.join(self.root, self.images[idx])
+        definition = "The definition of %s is %s"%(self.class_name[idx], self.captions[idx])
+        caption = self.imagenet_templates[np.random.choice(self.imagenet_templates_num)](self.class_name[idx])+ " "+ definition
+        images = self.transforms(Image.open(str(img_path)))
+        texts = self.tokenize([caption])[0]
+        return images, texts
+
+class RetrievalDataset(Dataset):
+    """ Image/Text Retrieval Dataset"""
+    def __init__(self, transform, data_path='.', tokenizer=None):
+        super(RetrievalDataset, self).__init__()
+        self.data_path = data_path
+        caption_file = os.path.join(self.data_path, 'test_captions.pt')
+        self.captions = torch.load(caption_file)
+        self.tokenizer = tokenizer
+        eval_img_keys_file = 'test_img_keys.tsv'
+        with open(os.path.join(self.data_path, eval_img_keys_file), 'r') as f:
+            img_keys = f.readlines()
+        self.img_keys = [int(k.strip()) for k in img_keys]
+        self.captions = {k: self.captions[k] for k in self.img_keys}
+        if not type(self.captions[self.img_keys[0]]) == list:
+            self.captions = {k: json.loads(self.captions[k]) for k in self.img_keys}
+
+        self.transform = transform
+        self.prompt_list = ["{}"] # ["a photo of {}"]
+        
+    def __getitem__(self, index):
+        img_key = self.img_keys[index]
+        if 'coco' in self.data_path:
+            image = Image.open(os.path.join(self.data_path, 'images/val2014/', 'COCO_val2014_{:012}.jpg'.format(img_key)))
+        else:
+            image = Image.open(os.path.join(self.data_path, 'images/{}.jpg'.format(img_key)))
+        image = self.transform(image)
+
+        captions = self.captions[img_key]
+        # if len(captions) > 5:
+        #     random.shuffle(captions)
+        #     captions = captions[:5]
+        tokenized_caps = []
+        for sentence in captions:
+            sentence_tokenized = []
+            for p in self.prompt_list:
+                sentence_tokenized.append(p.format(sentence.strip()))
+            tokenized_caps.extend(sentence_tokenized)
+        texts = self.tokenizer(tokenized_caps)[0]
+        return image, texts
+
+    def __len__(self):
+        return len(self.img_keys)
+    
+
+class MultiTaskDataLoader(object):
+    """
+    Multi-task DataLoader, the first dataloader is master dataloader
+    """
+
+    def __init__(self,
+                 loaders, seed=0):
+        assert len(loaders) > 1, "Less than 2 loader!"
+        self.loaders = loaders
+        self.iters = [iter(loader) for loader in loaders]
+        self.lens = [len(loader) for loader in loaders]
+        self.global_idx_in_cycle = 0
+        self.seed = seed
+
+    def __iter__(self):
+        if self.global_idx_in_cycle > 0:
+            self.iters[0] = iter(self.loaders[0])
+        return self
+
+    def __next__(self):
+        output_tuple = (*next(self.iters[0]),)
+        for k, (loader, _iter) in enumerate(zip(self.loaders[1:], self.iters[1:])):
+            try:
+                output_tuple += (*next(_iter),)
+            except StopIteration:
+                try:
+                    loader.batch_sampler.sampler.set_epoch(int(self.global_idx_in_cycle // self.lens[k + 1]))
+                except:
+                    pass
+                _iter = iter(loader)
+                self.iters[k + 1] = _iter
+                output_tuple += (*next(_iter),)
+
+        if self.global_idx_in_cycle < sys.maxsize - 1:
+            self.global_idx_in_cycle += 1
+        else:
+            self.global_idx_in_cycle = 0
+        return output_tuple
+
+    def __len__(self):
+        return self.lens[0]
 
 
 class SharedEpoch:
@@ -97,50 +228,20 @@ def get_dataset_size(shards):
     return total_size, num_shards
 
 
-def get_imagenet(args, preprocess_fns, split):
-    assert split in ["train", "val", "v2"]
-    is_train = split == "train"
+def get_imagenet(args, data_path, preprocess_fns):
     preprocess_train, preprocess_val = preprocess_fns
-
-    if split == "v2":
-        from imagenetv2_pytorch import ImageNetV2Dataset
-        dataset = ImageNetV2Dataset(location=args.imagenet_v2, transform=preprocess_val)
-    else:
-        if is_train:
-            data_path = args.imagenet_train
-            preprocess_fn = preprocess_train
-        else:
-            data_path = args.imagenet_val
-            preprocess_fn = preprocess_val
-        assert data_path
-
-        dataset = datasets.ImageFolder(data_path, transform=preprocess_fn)
-
-    if is_train:
-        idxs = np.zeros(len(dataset.targets))
-        target_array = np.array(dataset.targets)
-        k = 50
-        for c in range(1000):
-            m = target_array == c
-            n = len(idxs[m])
-            arr = np.zeros(n)
-            arr[:k] = 1
-            np.random.shuffle(arr)
-            idxs[m] = arr
-
-        idxs = idxs.astype('int')
-        sampler = SubsetRandomSampler(np.where(idxs)[0])
-    else:
-        sampler = None
+    
+    dataset = datasets.ImageFolder(data_path, transform=preprocess_val)
 
     dataloader = torch.utils.data.DataLoader(
         dataset,
         batch_size=args.batch_size,
         num_workers=args.workers,
-        sampler=sampler,
+        sampler=None,
+        drop_last=False
     )
 
-    return DataInfo(dataloader=dataloader, sampler=sampler)
+    return DataInfo(dataloader=dataloader, sampler=None)
 
 
 def count_samples(dataloader):
@@ -390,16 +491,133 @@ def get_wds_dataset(args, preprocess_img, is_train, epoch=0, floor=False, tokeni
     return DataInfo(dataloader=dataloader, shared_epoch=shared_epoch)
 
 
-def get_csv_dataset(args, preprocess_fn, is_train, epoch=0, tokenizer=None):
+def get_icar(args, preprocess_fn, is_train, epoch=0, tokenizer=None):
     input_filename = args.train_data if is_train else args.val_data
-    assert input_filename
-    dataset = CsvDataset(
-        input_filename,
+    train_dataset_names = input_filename.split(',')
+    train_datasets = []
+    data_root_paths = args.data_root.split(',')
+    sup_dataset = ImageNetCsvDataset(
+        data_root_paths[0],
+        train_dataset_names[0],
         preprocess_fn,
         img_key=args.csv_img_key,
         caption_key=args.csv_caption_key,
         sep=args.csv_separator,
-		tokenizer=tokenizer)
+        tokenizer=tokenizer)
+    
+    vl_dataset = CsvDataset(
+                data_root_paths[1],
+                train_dataset_names[1],
+                preprocess_fn,
+                img_key=args.csv_img_key,
+                caption_key=args.csv_caption_key,
+                sep=args.csv_separator,
+                tokenizer=tokenizer)
+ 
+         
+    num_samples = len(vl_dataset) + len(sup_dataset)
+    sup_sampler = MPerClassSampler(labels=sup_dataset.labels, 
+                                   m=args.num_per_class, batch_size=args.batch_size, 
+                                   length_before_new_iter=len(sup_dataset.labels)//args.world_size)
+    #sup_sampler = DistributedSampler(sup_dataset) if args.distributed and is_train else None
+    vl_sampler = DistributedSampler(vl_dataset) if args.distributed and is_train else None
+
+    sup_dataloader = DataLoader(
+        sup_dataset,
+        batch_size=args.sup_batch_size,
+        num_workers=args.workers,
+        pin_memory=True,
+        sampler=sup_sampler,
+        drop_last=is_train,
+    )
+    
+    vl_dataloader = DataLoader(
+        vl_dataset,
+        batch_size=args.vl_batch_size,
+        num_workers=args.workers,
+        pin_memory=True,
+        sampler=vl_sampler,
+        drop_last=is_train,
+    )
+    
+    dataloader = MultiTaskDataLoader([sup_dataloader, vl_dataloader], seed=0)
+    dataloader.num_samples = len(vl_dataset) + len(sup_dataset)
+    dataloader.num_batches = len(dataloader)
+    return DataInfo(dataloader, sup_sampler)
+
+
+
+
+def get_vl_imagenet(args, preprocess_fn, is_train, epoch=0, tokenizer=None):
+    input_filename = args.train_data 
+    train_dataset_names = input_filename.split(',')
+    train_datasets = []
+    data_root_paths = args.data_root.split(',')
+       
+    sup_dataset = datasets.ImageFolder(os.path.join(data_root_paths[0], 'train'),
+                                       transform=preprocess_fn)
+
+    sup_sampler = DistributedSampler(sup_dataset)
+    sup_dataloader = DataLoader(
+        sup_dataset,
+        batch_size=args.sup_batch_size,
+        num_workers=args.workers,
+        pin_memory=True,
+        sampler=sup_sampler,
+        drop_last=is_train,
+    )
+    
+    vl_dataset = CsvDataset(
+                data_root_paths[1],
+                train_dataset_names[1],
+                preprocess_fn,
+                img_key=args.csv_img_key,
+                caption_key=args.csv_caption_key,
+                sep=args.csv_separator,
+                tokenizer=tokenizer)
+
+    vl_sampler = DistributedSampler(vl_dataset) if args.distributed and is_train else None
+
+    
+    vl_dataloader = DataLoader(
+        vl_dataset,
+        batch_size=args.vl_batch_size,
+        num_workers=args.workers,
+        pin_memory=True,
+        sampler=vl_sampler,
+        drop_last=is_train,
+    )
+    
+    sup_dataloader.num_samples = len(sup_dataset)
+    sup_dataloader.num_batches = len(sup_dataloader)
+    return DataInfo(sup_dataloader, sup_sampler), DataInfo(sup_dataloader, sup_sampler), DataInfo(vl_dataloader, vl_sampler) 
+
+
+def get_csv_dataset(args, preprocess_fn, is_train, epoch=0, tokenizer=None):
+    input_filename = args.train_data if is_train else args.val_data
+    data_root = args.data_root if is_train else args.val_data_root
+    if 'imagenet' in input_filename:
+        dataset = ImageNetCsvDataset(
+            data_root,
+            input_filename,
+            preprocess_fn,
+            img_key=args.csv_img_key,
+            caption_key=args.csv_caption_key,
+            sep=args.csv_separator,
+            tokenizer=tokenizer)
+    elif 'coco' in input_filename or 'flickr' in input_filename: 
+        dataset = RetrievalDataset(
+            preprocess_fn, data_path=input_filename, tokenizer=tokenizer
+        )
+    else:
+        dataset = CsvDataset(
+            data_root,
+            input_filename,
+            preprocess_fn,
+            img_key=args.csv_img_key,
+            caption_key=args.csv_caption_key,
+            sep=args.csv_separator,
+            tokenizer=tokenizer)
     num_samples = len(dataset)
     sampler = DistributedSampler(dataset) if args.distributed and is_train else None
     shuffle = is_train and sampler is None
@@ -417,6 +635,55 @@ def get_csv_dataset(args, preprocess_fn, is_train, epoch=0, tokenizer=None):
     dataloader.num_batches = len(dataloader)
 
     return DataInfo(dataloader, sampler)
+
+
+
+def get_csv_multi_dataset(args, preprocess_fn, is_train, epoch=0, tokenizer=None):
+    input_filename = args.train_data if is_train else args.val_data
+    train_dataset_names = input_filename.split(',')
+    data_root = args.data_root.split(',')
+    train_datasets = []
+    for idx, name in enumerate(train_dataset_names):
+        if 'imagenet' in name:
+            dataset = ImageNetCsvDataset(
+            data_root[idx],
+            name,
+            preprocess_fn,
+            img_key=args.csv_img_key,
+            caption_key=args.csv_caption_key,
+            sep=args.csv_separator,
+            tokenizer=tokenizer)
+        else:
+            dataset = CsvDataset(
+                data_root[idx],
+                name,
+                preprocess_fn,
+                img_key=args.csv_img_key,
+                caption_key=args.csv_caption_key,
+                sep=args.csv_separator,
+                tokenizer=tokenizer)
+        train_datasets.append(dataset)
+         
+    dataset = torch.utils.data.ConcatDataset(train_datasets)
+    num_samples = len(dataset)
+    sampler = DistributedSampler(dataset) if args.distributed and is_train else None
+    shuffle = is_train and sampler is None
+
+    dataloader = DataLoader(
+        dataset,
+        batch_size=args.batch_size,
+        shuffle=shuffle,
+        num_workers=args.workers,
+        pin_memory=True,
+        sampler=sampler,
+        drop_last=is_train,
+    )
+    dataloader.num_samples = num_samples
+    dataloader.num_batches = len(dataloader)
+
+    return DataInfo(dataloader, sampler)
+
+
 
 class SyntheticDataset(Dataset):
 
@@ -463,7 +730,13 @@ def get_synthetic_dataset(args, preprocess_fn, is_train, epoch=0, tokenizer=None
 def get_dataset_fn(data_path, dataset_type):
     if dataset_type == "webdataset":
         return get_wds_dataset
+    elif dataset_type == 'icar':
+        return get_icar
+    elif dataset_type == "vl_imagenet":
+        return get_vl_imagenet
     elif dataset_type == "csv":
+        if ',' in data_path:
+            return get_csv_multi_dataset
         return get_csv_dataset
     elif dataset_type == "synthetic":
         return get_synthetic_dataset
@@ -484,18 +757,32 @@ def get_data(args, preprocess_fns, epoch=0, tokenizer=None):
     preprocess_train, preprocess_val = preprocess_fns
     data = {}
 
-    if args.train_data or args.dataset_type == "synthetic":
+    if args.train_data or args.dataset_type == "icar":
         data["train"] = get_dataset_fn(args.train_data, args.dataset_type)(
             args, preprocess_train, is_train=True, epoch=epoch, tokenizer=tokenizer)
 
+    if args.train_data and args.dataset_type == "vl_imagenet":
+        dataloader, sup_dataloader, vl_dataloader = get_dataset_fn(args.train_data, args.dataset_type)(
+            args, preprocess_train, is_train=True, epoch=epoch, tokenizer=tokenizer)
+        data["train"] = dataloader
+        data["train_loaders"] = (sup_dataloader, vl_dataloader)
+        
     if args.val_data:
-        data["val"] = get_dataset_fn(args.val_data, args.dataset_type)(
+        data["val"] = get_dataset_fn(args.val_data, args.val_dataset_type)(
             args, preprocess_val, is_train=False, tokenizer=tokenizer)
 
     if args.imagenet_val is not None:
-        data["imagenet-val"] = get_imagenet(args, preprocess_fns, "val")
+        data["imagenet-val"] = get_imagenet(args, args.imagenet_val, preprocess_fns)
 
     if args.imagenet_v2 is not None:
-        data["imagenet-v2"] = get_imagenet(args, preprocess_fns, "v2")
-
+        data["imagenet-v2"] = get_imagenet(args, args.imagenet_v2, preprocess_fns)
+    
+    if args.imagenet_r is not None:
+        data["imagenet-r"] = get_imagenet(args, args.imagenet_r, preprocess_fns)  
+        
+    if args.imagenet_a is not None:
+        data["imagenet-a"] = get_imagenet(args, args.imagenet_a, preprocess_fns)  
+        
+    if args.imagenet_sketch is not None: 
+        data["imagenet-sketch"] = get_imagenet(args, args.imagenet_sketch, preprocess_fns)  
     return data

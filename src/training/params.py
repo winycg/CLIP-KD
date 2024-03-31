@@ -31,16 +31,42 @@ def parse_args(args):
         help="Number of samples in dataset. Required for webdataset if not available in info file.",
     )
     parser.add_argument(
+        "--num-per-class",
+        type=int,
+        default=1,
+        help="Number of samples per class",
+    )
+    
+    parser.add_argument(
         "--val-num-samples",
         type=int,
         default=None,
         help="Number of samples in dataset. Useful for webdataset if not available in info file.",
     )
     parser.add_argument(
+        "--data-root",
+        type=str,
+        default=None,
+        help="Path to data",
+    )
+    parser.add_argument(
+        "--val-data-root",
+        type=str,
+        default=None,
+        help="Path to data",
+    )
+    
+    parser.add_argument(
         "--dataset-type",
-        choices=["webdataset", "csv", "synthetic", "auto"],
-        default="auto",
+        choices=["webdataset", "csv", "synthetic", "auto", "icar", "vl_imagenet"], 
+        default="csv",
         help="Which type of dataset to process."
+    )
+    parser.add_argument(
+        "--val-dataset-type",
+        choices=["webdataset", "csv", "synthetic", "auto", "icar"], 
+        default="csv",
+        help="Which type of val dataset to process."
     )
     parser.add_argument(
         "--dataset-resampled",
@@ -79,6 +105,26 @@ def parse_args(args):
         help="Path to imagenet v2 for conducting zero shot evaluation.",
     )
     parser.add_argument(
+        "--imagenet-r",
+        type=str,
+        default=None,
+        help="Path to imagenet-r for conducting zero shot evaluation.",
+    )
+    parser.add_argument(
+        "--imagenet-a",
+        type=str,
+        default=None,
+        help="Path to imagenet-a for conducting zero shot evaluation.",
+    )
+    parser.add_argument(
+        "--imagenet-sketch",
+        type=str,
+        default=None,
+        help="Path to imagenet-sketch for conducting zero shot evaluation.",
+    )
+    
+    
+    parser.add_argument(
         "--logs",
         type=str,
         default="./logs/",
@@ -89,6 +135,12 @@ def parse_args(args):
         action="store_true",
         default=False,
         help="log files on local master, otherwise global master only.",
+    )
+    parser.add_argument(
+        "--tag",
+        type=str,
+        default="grad",
+        help="tag for this try",
     )
     parser.add_argument(
         "--name",
@@ -103,12 +155,28 @@ def parse_args(args):
         "--batch-size", type=int, default=64, help="Batch size per GPU."
     )
     parser.add_argument(
+        "--sup-batch-size", type=int, default=64, help="Batch size per GPU."
+    )
+    parser.add_argument(
+        "--vl-batch-size", type=int, default=64, help="Batch size per GPU."
+    )
+    parser.add_argument(
         "--epochs", type=int, default=32, help="Number of epochs to train for."
     )
     parser.add_argument("--lr", type=float, default=None, help="Learning rate.")
     parser.add_argument("--beta1", type=float, default=None, help="Adam beta 1.")
     parser.add_argument("--beta2", type=float, default=None, help="Adam beta 2.")
     parser.add_argument("--eps", type=float, default=None, help="Adam epsilon.")
+    parser.add_argument("--alpha_ckd_loss", type=float, default=0., help="CRD loss weight")
+    parser.add_argument("--alpha_icl_loss", type=float, default=0., help="ICL_loss weight")
+    parser.add_argument("--alpha_cross_kd_loss", type=float, default=0., help="cross_kd_loss weight")
+    parser.add_argument("--alpha_fd_loss", type=float, default=0., help="FD_loss weight")
+    parser.add_argument("--alpha_gd_loss", type=float, default=0., help="gd_loss weight")
+    parser.add_argument("--alpha_afd_loss", type=float, default=0., help="AFD_loss weight")
+    
+    parser.add_argument("--mask_ratio", type=float, default=0., help="mask ratio")
+    
+    
     parser.add_argument("--wd", type=float, default=0.2, help="Weight decay.")
     parser.add_argument(
         "--warmup", type=int, default=10000, help="Number of steps to warmup for."
@@ -156,6 +224,37 @@ def parse_args(args):
         type=str,
         default="RN50",
         help="Name of the vision backbone to use.",
+    )
+    parser.add_argument(
+        "--model-checkpoint",
+        type=str,
+        default="",
+        help="model checkpoint path",
+    )
+    
+    parser.add_argument(
+        "--t-model",
+        type=str,
+        default="RN50",
+        help="Name of the teacher vision backbone to use.",
+    )
+    parser.add_argument(
+        "--t-model-checkpoint",
+        type=str,
+        default="RN50",
+        help="teacher checkpoint path",
+    )
+    parser.add_argument(
+        "--t-eval",
+        default=False,
+        action="store_true",
+        help="Whether to evaluate the pretrained teacher model"
+    )
+    parser.add_argument(
+        "--eval",
+        default=False,
+        action="store_true",
+        help="Whether to evaluate the pretrained teacher model"
     )
     parser.add_argument(
         "--pretrained",

@@ -2,12 +2,14 @@ import logging
 import os
 import sys
 import random
+import json
 from datetime import datetime
 
 import numpy as np
 import torch
 from torch import optim
 from torch.cuda.amp import GradScaler
+from open_clip import ClipLoss, KDClipLoss, get_cast_dtype
 
 try:
     import wandb
@@ -24,13 +26,13 @@ try:
 except ImportError:
     hvd = None
 
-from open_clip import create_model_and_transforms, trace_model, get_tokenizer
+from open_clip import create_kd_model_and_transforms, trace_model, get_tokenizer
 from training.data import get_data
 from training.distributed import is_master, init_distributed_device, world_info_from_env
 from training.logger import setup_logging
 from training.params import parse_args
 from training.scheduler import cosine_lr
-from training.train import train_one_epoch, evaluate
+from training.train import train_kd_one_epoch, evaluate
 
 
 def random_seed(seed=42, rank=0):
@@ -41,6 +43,7 @@ def random_seed(seed=42, rank=0):
 
 def main(args):
     args = parse_args(args)
+
     if torch.cuda.is_available():
         # This enables tf32 on Ampere GPUs which is only 8% slower than
         # float16 and almost as accurate as float32
@@ -52,14 +55,19 @@ def main(args):
     # sanitize model name for filesystem / uri use, easier if we don't use / in name as a rule?
     args.model = args.model.replace('/', '-')
 
+    with open(os.path.join(os.getcwd(), 'open_clip/model_configs/'+args.t_model+'.json'), 'r') as f:
+        args.t_embed_dim = json.load(f)['embed_dim']
+    with open(os.path.join(os.getcwd(), 'open_clip/model_configs/'+args.model+'.json'), 'r') as f:
+        args.s_embed_dim = json.load(f)['embed_dim']
+    
     # get the name of the experiments
     if args.name is None:
         args.name = '-'.join([
             datetime.now().strftime("%Y_%m_%d-%H_%M_%S"),
-            f"model_{args.model}",
+            f"t_model_{args.t_model}",
+            f"s_model_{args.model}",
             f"lr_{args.lr}",
             f"b_{args.batch_size}",
-            f"epochs_{args.epochs}",
             f"tag_{args.tag}"
         ])
 
@@ -118,8 +126,9 @@ def main(args):
         logging.info(f'Running with a single process. Device {args.device}.')
 
     random_seed(args.seed, 0)
-    model, preprocess_train, preprocess_val = create_model_and_transforms(
+    model, t_model, preprocess_train, preprocess_val = create_kd_model_and_transforms(
         args.model,
+        args.t_model,
         args.pretrained,
         precision=args.precision,
         device=device,
@@ -149,9 +158,13 @@ def main(args):
         model.set_grad_checkpointing()
 
     if is_master(args):
-        logging.info("Visual Params:")
+        logging.info("Teacher Visual Params:")
+        logging.info(f"{str(sum([i.numel() for i in t_model.visual.parameters()])/1e6)}M")
+        logging.info("Teacher Text Params:")
+        logging.info(f"{str(sum([i.numel() for i in t_model.transformer.parameters()])/1e6)}M")
+        logging.info("Student Visual Params:")
         logging.info(f"{str(sum([i.numel() for i in model.visual.parameters()])/1e6)}M")
-        logging.info("Text Params:")
+        logging.info("Student Text Params:")
         logging.info(f"{str(sum([i.numel() for i in model.transformer.parameters()])/1e6)}M")
         params_file = os.path.join(args.logs, args.name, "params.txt")
         with open(params_file, "w") as f:
@@ -160,17 +173,6 @@ def main(args):
                 logging.info(f"  {name}: {val}")
                 f.write(f"{name}: {val}\n")
 
-    if len(args.model_checkpoint) !=0:
-        checkpoint = torch.load(args.model_checkpoint, map_location='cpu')
-        sd = checkpoint
-        if "state_dict" in sd.keys():
-            sd = checkpoint["state_dict"]
-        if next(iter(sd.items()))[0].startswith('module'):
-            sd = {k[len('module.'):]: v for k, v in sd.items()}
-        model.load_state_dict(sd)
-        print('Pre-trained model loaded successfully')
-        
-        
     if args.distributed and not args.horovod:
         if args.use_bn_sync:
             model = torch.nn.SyncBatchNorm.convert_sync_batchnorm(model)
@@ -180,10 +182,30 @@ def main(args):
             ddp_args['static_graph'] = True
         model = torch.nn.parallel.DistributedDataParallel(model, device_ids=[device], **ddp_args)
 
+    t_model.eval()
+    for t_n, t_p in t_model.named_parameters():
+        t_p.requires_grad = False
+    checkpoint = torch.load(args.t_model_checkpoint, map_location='cpu')
+    sd = checkpoint
+    #sd = checkpoint["state_dict"]
+    if next(iter(sd.items()))[0].startswith('module'):
+        sd = {k[len('module.'):]: v for k, v in sd.items()}
+    t_model.load_state_dict(sd)
+    print('Teacher model loaded successfully')
+    
+    loss = KDClipLoss(
+        args=args,
+        local_loss=args.local_loss,
+        gather_with_grad=args.gather_with_grad,
+        cache_labels=True,
+        rank=args.rank,
+        world_size=args.world_size,
+        use_horovod=args.horovod).cuda()
+    
     # create optimizer and scaler
     optimizer = None
     scaler = None
-
+    
     if args.train_data or args.dataset_type == "synthetic":
         assert not args.trace, 'Cannot train with traced model'
 
@@ -198,6 +220,7 @@ def main(args):
             [
                 {"params": gain_or_bias_params, "weight_decay": 0.},
                 {"params": rest_params, "weight_decay": args.wd},
+                {"params": loss.parameters()}
             ],
             lr=args.lr,
             betas=(args.beta1, args.beta2),
@@ -210,8 +233,6 @@ def main(args):
 
         scaler = GradScaler() if args.precision == "amp" else None
 
-    
-        
     # optionally resume from a checkpoint
     start_epoch = 0
     if args.resume is not None:
@@ -224,8 +245,8 @@ def main(args):
                 if not args.distributed and next(iter(sd.items()))[0].startswith('module'):
                     sd = {k[len('module.'):]: v for k, v in sd.items()}
                 model.load_state_dict(sd)
-                #if optimizer is not None:
-                #    optimizer.load_state_dict(checkpoint["optimizer"])
+                if optimizer is not None:
+                    optimizer.load_state_dict(checkpoint["optimizer"])
                 if scaler is not None and 'scaler' in checkpoint:
                     scaler.load_state_dict(checkpoint['scaler'])
                 logging.info(f"=> resuming checkpoint '{args.resume}' (epoch {start_epoch})")
@@ -240,6 +261,7 @@ def main(args):
     data = get_data(args, (preprocess_train, preprocess_val), epoch=start_epoch, tokenizer=get_tokenizer(args.model))
     assert len(data), 'At least one train or eval dataset must be specified.'
 
+    
     # create scheduler if train
     scheduler = None
     if 'train' in data and optimizer is not None:
@@ -275,17 +297,16 @@ def main(args):
     if 'train' not in data:
         evaluate(model, data, start_epoch, args, writer)
         return
+
+    if args.t_eval:
+        print('evaluate teacher:')
+        evaluate(t_model, data, start_epoch, args, writer)
     
-    if args.eval:
-        print('evaluate model:')
-        evaluate(model, data, start_epoch, args, writer)
-        exit()
-        
     for epoch in range(start_epoch, args.epochs):
         if is_master(args):
             logging.info(f'Start epoch {epoch}')
 
-        train_one_epoch(model, data, epoch, optimizer, scaler, scheduler, args, writer)
+        train_kd_one_epoch(model, t_model, data, epoch, loss, optimizer, scaler, scheduler, args, writer)
         completed_epoch = epoch + 1
 
         if any(v in data for v in ('val', 'imagenet-val', 'imagenet-v2')):
@@ -316,7 +337,6 @@ def main(args):
                 )
 
     logging.info(f'The files are saved at {args.logs}')
-    
     if args.wandb and is_master(args):
         wandb.finish()
 

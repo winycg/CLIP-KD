@@ -13,7 +13,7 @@ try:
 except ImportError:
     wandb = None
 
-from open_clip import ClipLoss, get_cast_dtype
+from open_clip import ClipLoss, KDClipLoss, get_cast_dtype
 from .distributed import is_master
 from .zero_shot import zero_shot_eval
 from .precision import get_autocast
@@ -152,7 +152,137 @@ def train_one_epoch(model, data, epoch, optimizer, scaler, scheduler, args, tb_w
             data_time_m.reset()
     # end for
 
+    
+def train_kd_one_epoch(model, t_model, data, epoch, loss, optimizer, scaler, scheduler, args, tb_writer=None):
+    device = torch.device(args.device)
+    autocast = get_autocast(args.precision)
+    cast_dtype = get_cast_dtype(args.precision)
 
+    model.train()
+    
+    data['train'].set_epoch(epoch)  # set epoch in process safe manner via sampler or shared_epoch
+    dataloader = data['train'].dataloader
+    num_batches_per_epoch = dataloader.num_batches
+    sample_digits = math.ceil(math.log(dataloader.num_samples + 1, 10))
+
+    loss_m = AverageMeter()
+    loss_task = AverageMeter()
+    loss_icl = AverageMeter()
+    loss_ckd = AverageMeter()
+    loss_cross_kd  = AverageMeter()
+    loss_fd = AverageMeter()
+    loss_gd = AverageMeter()
+    loss_afd = AverageMeter()
+    batch_time_m = AverageMeter()
+    data_time_m = AverageMeter()
+    end = time.time()
+    for i, batch in enumerate(dataloader):
+        step = num_batches_per_epoch * epoch + i
+        
+        if not args.skip_scheduler:
+            scheduler(step)
+
+        images, texts = batch
+        images = images.to(device=device, dtype=cast_dtype, non_blocking=True)
+        texts = texts.to(device=device, non_blocking=True)
+
+        data_time_m.update(time.time() - end)
+        optimizer.zero_grad()
+
+        with autocast():
+            image_features, text_features, logit_scale = model(images, texts, distill=True, mask_ratio=args.mask_ratio)
+
+            with torch.no_grad():
+                t_image_features, t_text_features, t_logit_scale = t_model(images, texts)
+
+            losses = loss(image_features, text_features, logit_scale, \
+                t_image_features, t_text_features, t_logit_scale)
+             
+            task_loss, ckd_loss, icl_loss, cross_kd_loss, fd_loss, gd_loss, afd_loss = losses
+            total_loss = task_loss + ckd_loss + icl_loss + cross_kd_loss + fd_loss + gd_loss + afd_loss
+
+        if scaler is not None:
+            scaler.scale(total_loss).backward()
+            if args.horovod:
+                optimizer.synchronize()
+                scaler.unscale_(optimizer)
+                if args.grad_clip_norm is not None:
+                    torch.nn.utils.clip_grad_norm_(model.parameters(), args.grad_clip_norm, norm_type=2.0)
+                with optimizer.skip_synchronize():
+                    scaler.step(optimizer)
+            else:
+                if args.grad_clip_norm is not None:
+                    scaler.unscale_(optimizer)
+                    torch.nn.utils.clip_grad_norm_(model.parameters(), args.grad_clip_norm, norm_type=2.0)
+                scaler.step(optimizer)
+            scaler.update()
+        else:
+            total_loss.backward()
+            if args.grad_clip_norm is not None:
+                torch.nn.utils.clip_grad_norm_(model.parameters(), args.grad_clip_norm, norm_type=2.0)
+            optimizer.step()
+
+        # Note: we clamp to 4.6052 = ln(100), as in the original paper.
+        with torch.no_grad():
+            unwrap_model(model).logit_scale.clamp_(0, math.log(100))
+
+        batch_time_m.update(time.time() - end)
+        end = time.time()
+        batch_count = i + 1
+        if is_master(args) and (i % 100 == 0 or batch_count == num_batches_per_epoch):
+            batch_size = len(images)
+            num_samples = batch_count * batch_size * args.world_size
+            samples_per_epoch = dataloader.num_samples
+            percent_complete = 100.0 * batch_count / num_batches_per_epoch
+
+            # NOTE loss is coarsely sampled, just master node and per log update
+            loss_m.update(total_loss.item(), batch_size)
+            loss_task.update(task_loss.item(), batch_size)
+            loss_icl.update(icl_loss.item(), batch_size)
+            loss_ckd.update(ckd_loss.item(), batch_size)
+            loss_cross_kd.update(cross_kd_loss.item(), batch_size)
+            loss_fd.update(fd_loss.item(), batch_size)
+            loss_gd.update(gd_loss.item(), batch_size)
+            loss_afd.update(afd_loss.item(), batch_size)
+            logit_scale_scalar = logit_scale.item()
+            logging.info(
+                f"Train Epoch: {epoch} [{num_samples:>{sample_digits}}/{samples_per_epoch} ({percent_complete:.0f}%)] "
+                f"Total Loss: {loss_m.val:#.5g} ({loss_m.avg:#.4g}) "
+                f"Task Loss: {loss_task.val:#.5g} ({loss_task.avg:#.4g}) "
+                f"ICL Loss: {loss_icl.val:#.5g} ({loss_icl.avg:#.4g}) "
+                f"CKD Loss: {loss_ckd.val:#.5g} ({loss_ckd.avg:#.4g}) "
+                f"Cross KD Loss: {loss_cross_kd.val:#.5g} ({loss_cross_kd.avg:#.4g}) "
+                f"FD Loss: {loss_fd.val:#.5g} ({loss_fd.avg:#.4g}) "
+                f"GD Loss: {loss_gd.val:#.5g} ({loss_gd.avg:#.4g}) "
+                f"AFD Loss: {loss_afd.val:#.5g} ({loss_afd.avg:#.4g}) "
+                f"Data (t): {data_time_m.avg:.3f} "
+                f"Batch (t): {batch_time_m.avg:.3f}, {args.batch_size*args.world_size / batch_time_m.val:#g}/s "
+                f"LR: {optimizer.param_groups[0]['lr']:5f} "
+                f"Logit Scale: {logit_scale_scalar:.3f}"
+            )
+
+            # Save train loss / etc. Using non avg meter values as loggers have their own smoothing
+            log_data = {
+                "loss": loss_m.val,
+                "data_time": data_time_m.val,
+                "batch_time": batch_time_m.val,
+                "samples_per_scond": args.batch_size*args.world_size / batch_time_m.val,
+                "scale":  logit_scale_scalar,
+                "lr": optimizer.param_groups[0]["lr"]
+            }
+            for name, val in log_data.items():
+                name = "train/" + name
+                if tb_writer is not None:
+                    tb_writer.add_scalar(name, val, step)
+                if args.wandb:
+                    assert wandb is not None, 'Please install wandb.'
+                    wandb.log({name: val, 'step': step})
+
+            # resetting batch / data time meters per log window
+            batch_time_m.reset()
+            data_time_m.reset()
+    
+    
 def evaluate(model, data, epoch, args, tb_writer=None):
     metrics = {}
     if not is_master(args):
@@ -162,6 +292,7 @@ def evaluate(model, data, epoch, args, tb_writer=None):
 
     zero_shot_metrics = zero_shot_eval(model, data, epoch, args)
     metrics.update(zero_shot_metrics)
+    
 
     autocast = get_autocast(args.precision)
     cast_dtype = get_cast_dtype(args.precision)
@@ -258,3 +389,5 @@ def get_metrics(image_features, text_features, logit_scale):
             metrics[f"{name}_R@{k}"] = np.mean(preds < k)
 
     return metrics
+
+

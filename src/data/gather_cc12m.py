@@ -15,7 +15,7 @@ def grab(line):
     """
     uid, split, line = line
     try:
-        caption, url = line.split("\t")[:2]
+        url, caption = line.split("\t")[:2]
     except:
         print("Parse error")
         return
@@ -61,18 +61,15 @@ if __name__ == "__main__":
     if not os.path.exists(ROOT):
         os.mkdir(ROOT)
         os.mkdir(os.path.join(ROOT,"train"))
-        os.mkdir(os.path.join(ROOT,"val"))
         for i in range(1000):
             os.mkdir(os.path.join(ROOT,"train", str(i)))
-            os.mkdir(os.path.join(ROOT,"val", str(i)))
 
     
     p = mp.Pool(300)
     
     for tsv in sys.argv[2:]:
         print("Processing file", tsv)
-        assert 'val' in tsv.lower() or 'train' in tsv.lower()
-        split = 'val' if 'val' in tsv.lower() else 'train'
+        split = 'train'
         results = p.map(grab,
                         [(i,split,x) for i,x in enumerate(open(tsv).read().split("\n"))])
         

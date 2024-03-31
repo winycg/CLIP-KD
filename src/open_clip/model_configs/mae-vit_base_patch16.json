@@ -1,0 +1,16 @@
+
+{
+    "embed_dim": 512,
+    "vision_cfg": {
+        "mae_model_name": "mae-vit_base_patch16",
+        "mae_model_pretrained": "/vc_data/v-chuyang/pretrained_models/mae_pretrain_vit_base.pth",
+        "image_size": 224
+    },
+    "text_cfg": {
+        "context_length": 77,
+        "vocab_size": 49408,
+        "width": 512,
+        "heads": 8,
+        "layers": 12
+    }
+}
