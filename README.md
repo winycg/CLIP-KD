@@ -71,37 +71,37 @@ The teacher is pretrained on CC3M+12M. Students are distilled on CC3M+12M.
 
 ### Supervised by ViT-B/16 as the teacher
 The teacher is pretrained on CC3M+12M. Students are distilled on CC3M+12M.
-| Role | Network |Method | ImageNet Acc| train script |
-| :----:  | :----:  | :----:  |:----: |:----: |
-|  Teacher | ViT-B/16|-| 36.99 |[sh](https://github.com/winycg/CLIP-KD/blob/main/script/baseline/ViT_B_16_baseline.sh)|
-|  Student | ViT-T/16|Baseline|30.55|[sh](https://github.com/winycg/CLIP-KD/blob/main/script/baseline/ViT_T_16_baseline.sh)|
-|  Student | ViT-T/16| CLIP-KD |34.90|[sh](https://github.com/winycg/CLIP-KD/blob/main/script/ViT_B_16_KD/ViT_T_16_kd.sh)|
-|  Student | MobileViT-S |Baseline|32.60|[sh](https://github.com/winycg/CLIP-KD/blob/main/script/baseline/mobilevit_s_baseline.sh)|
-|  Student | MobileViT-S |CLIP-KD|35.96|[sh](https://github.com/winycg/CLIP-KD/blob/main/script/ViT_B_16_KD/mobilevit_s_kd.sh)|
-|  Student | Swin-T |Baseline|36.38|[sh](https://github.com/winycg/CLIP-KD/blob/main/script/baseline/swin_tiny_baseline.sh)|
-|  Student | Swin-T |CLIP-KD|40.18|[sh](https://github.com/winycg/CLIP-KD/blob/main/script/ViT_B_16_KD/swin_tiny_kd.sh)|
-|  Student | MobileNetV3 |Baseline|25.11|[sh](https://github.com/winycg/CLIP-KD/blob/main/script/baseline/mobilenetv3_small_100_baseline.sh)|
-|  Student | MobileNetV3 |CLIP-KD|26.95|[sh](https://github.com/winycg/CLIP-KD/blob/main/script/ViT_B_16_KD/mobilenetv3_small_100_kd.sh)|
-|  Student |  EfficientNet-B0 |Baseline|32.55|[sh](https://github.com/winycg/CLIP-KD/blob/main/script/baseline/efficientnet_b0_baseline.sh)|
-|  Student |  EfficientNet-B0 |CLIP-KD|35.44|[sh](https://github.com/winycg/CLIP-KD/blob/main/script/ViT_B_16_KD/efficientnet_b0_kd.sh)|
-|  Student |  ResNet-18 | Baseline|28.55 |[sh](https://github.com/winycg/CLIP-KD/blob/main/script/baseline/RN18_baseline.sh)|
-|  Student |  ResNet-18 | CLIP-KD|31.36|[sh](https://github.com/winycg/CLIP-KD/blob/main/script/ViT_B_16_KD/RN18_kd.sh)|
+| Role | Network |Method | ImageNet Acc| Train script | Download |
+| :----:  | :----:  | :----:  |:----: |:----: | :----: |
+|  Teacher | ViT-B/16|-| 36.99 |[sh](https://github.com/winycg/CLIP-KD/blob/main/script/baseline/ViT_B_16_baseline.sh)| [model](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/ViT_B_16_cc3m_12m_ep32.pt) \| [log](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/ViT_B_16_cc3m_12m_ep32.log) |
+|  Student | ViT-T/16|Baseline|30.55|[sh](https://github.com/winycg/CLIP-KD/blob/main/script/baseline/ViT_T_16_baseline.sh)| [model](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/ViT_T_16_cc3m_12m_ep32.pt) \| [log](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/ViT_T_16_cc3m_12m_ep32.log) |
+|  Student | ViT-T/16| CLIP-KD |34.90|[sh](https://github.com/winycg/CLIP-KD/blob/main/script/ViT_B_16_KD/ViT_T_16_kd.sh)| [model](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/ViT-B-16_cc3m_12m_kd_ViT-T-16_cc3m_12m_ep32.pt) \| [log](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/ViT-B-16_cc3m_12m_kd_ViT-T-16_cc3m_12m_ep32.log) |
+|  Student | MobileViT-S |Baseline|32.60|[sh](https://github.com/winycg/CLIP-KD/blob/main/script/baseline/mobilevit_s_baseline.sh)|[model](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/timm-mobilevit_s_cc3m_12m_ep32.pt) \| [log](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/timm-mobilevit_s_cc3m_12m_ep32.log) |
+|  Student | MobileViT-S |CLIP-KD|35.96|[sh](https://github.com/winycg/CLIP-KD/blob/main/script/ViT_B_16_KD/mobilevit_s_kd.sh)| [model](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/ViT-B-16_cc3m_12m_kd_timm-mobilevit_s_cc3m_12m_ep32.pt) \| [log](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/ViT-B-16_cc3m_12m_kd_timm-mobilevit_s_cc3m_12m_ep32.log) |
+|  Student | Swin-T |Baseline|36.38|[sh](https://github.com/winycg/CLIP-KD/blob/main/script/baseline/swin_tiny_baseline.sh)|[model](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/timm-swin_tiny_patch4_windows7_224_cc3m_12m_ep32.pt) \| [log](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/timm-swin_tiny_patch4_windows7_224_cc3m_12m_ep32.log) |
+|  Student | Swin-T |CLIP-KD|40.18|[sh](https://github.com/winycg/CLIP-KD/blob/main/script/ViT_B_16_KD/swin_tiny_kd.sh)| [model](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/ViT-B-16_cc3m_12m_kd_timm-swin_tiny_patch4_windows7_224_cc3m_12m_ep32.pt) \| [log](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/ViT-B-16_cc3m_12m_kd_timm-swin_tiny_patch4_windows7_224_cc3m_12m_ep32.log) |
+|  Student | MobileNetV3 |Baseline|25.11|[sh](https://github.com/winycg/CLIP-KD/blob/main/script/baseline/mobilenetv3_small_100_baseline.sh)| [model](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/timm_mobilenetv3_small_100_cc3m_12m_ep32.pt) \| [log](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/timm_mobilenetv3_small_100_cc3m_12m_ep32.log) |
+|  Student | MobileNetV3 |CLIP-KD|26.95|[sh](https://github.com/winycg/CLIP-KD/blob/main/script/ViT_B_16_KD/mobilenetv3_small_100_kd.sh)| [model](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/ViT-B-16_cc3m_12m_kd_timm_mobilenetv3_small_100_cc3m_12m_ep32.pt) \| [log](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/ViT-B-16_cc3m_12m_kd_timm_mobilenetv3_small_100_cc3m_12m_ep32.log) |
+|  Student |  EfficientNet-B0 |Baseline|32.55|[sh](https://github.com/winycg/CLIP-KD/blob/main/script/baseline/efficientnet_b0_baseline.sh)| [model](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/timm-efficientnet-b0_cc3m_12m_ep32.pt) \| [log](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/timm-efficientnet-b0_cc3m_12m_ep32.log) |
+|  Student |  EfficientNet-B0 |CLIP-KD|35.44|[sh](https://github.com/winycg/CLIP-KD/blob/main/script/ViT_B_16_KD/efficientnet_b0_kd.sh)| [model](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/ViT-B-16_cc3m_12m_kd_timm-efficientnet-b0_cc3m_12m_ep32.pt) \| [log](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/ViT-B-16_cc3m_12m_kd_timm-efficientnet-b0_cc3m_12m_ep32.log) |
+|  Student |  ResNet-18 | Baseline|28.55 |[sh](https://github.com/winycg/CLIP-KD/blob/main/script/baseline/RN18_baseline.sh)| [model](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/timm-resnet18_cc3m_12m_ep32.pt) \| [log](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/timm-resnet18_cc3m_12m_ep32.log) |
+|  Student |  ResNet-18 | CLIP-KD|31.36|[sh](https://github.com/winycg/CLIP-KD/blob/main/script/ViT_B_16_KD/RN18_kd.sh)| [model](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/ViT-B-16_cc3m_12m_kd_timm-resnet18_cc3m_12m_ep32.pt) \| [log](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/ViT-B-16_cc3m_12m_kd_timm-resnet18_cc3m_12m_ep32.log) |
 
 ### Supervised by ResNet-101 as the teacher
 The teacher is pretrained on CC3M+12M. Students are distilled on CC3M+12M.
-| Role | Network |Method | ImageNet Acc| train script |
-|:----:  | :----: | :----:  |:----:  |:----:  |
-|  Teacher |  ResNet-101 |-| 36.76 |[sh](https://github.com/winycg/CLIP-KD/blob/main/script/baseline/RN101_baseline.sh)|
-|  Student | MobileViT-S |Baseline|32.60|[sh](https://github.com/winycg/CLIP-KD/blob/main/script/baseline/mobilevit_s_baseline.sh)|
-|  Student | MobileViT-S |CLIP-KD|34.97|[sh](https://github.com/winycg/CLIP-KD/blob/main/script/RN101_KD/mobilevit_s_kd.sh)|
-|  Student | Swin-T |Baseline|36.38|[sh](https://github.com/winycg/CLIP-KD/blob/main/script/baseline/swin_tiny_baseline.sh)|
-|  Student | Swin-T |CLIP-KD|39.51|[sh](https://github.com/winycg/CLIP-KD/blob/main/script/RN101_KD/swin_tiny_kd.sh)|
-|  Student | MobileNetV3 |Baseline|25.11|[sh](https://github.com/winycg/CLIP-KD/blob/main/script/baseline/mobilenetv3_small_100_baseline.sh)|
-|  Student | MobileNetV3 |CLIP-KD|26.15|[sh](https://github.com/winycg/CLIP-KD/blob/main/script/RN101_KD/mobilenetv3_small_100_kd.sh)|
-|  Student |  EfficientNet-B0 |Baseline|32.55|[sh](https://github.com/winycg/CLIP-KD/blob/main/script/baseline/efficientnet_b0_baseline.sh)|
-|  Student |  EfficientNet-B0 |CLIP-KD| 34.64|[sh](https://github.com/winycg/CLIP-KD/blob/main/script/RN101_KD/efficientnet_b0_kd.sh)|
-|  Student |  ResNet-18 | Baseline|28.55 |[sh](https://github.com/winycg/CLIP-KD/blob/main/script/baseline/RN18_baseline.sh)|
-|  Student |  ResNet-18 | CLIP-KD|30.88|[sh](https://github.com/winycg/CLIP-KD/blob/main/script/RN101_KD/RN18_kd.sh)|
+| Role | Network |Method | ImageNet Acc| Train script | Download |
+|:----:  | :----: | :----:  |:----:  |:----:  |:----:  |
+|  Teacher |  ResNet-101 |-| 36.76 |[sh](https://github.com/winycg/CLIP-KD/blob/main/script/baseline/RN101_baseline.sh)| [model](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/RN101_cc3m_12m_ep32.pt) \| [log](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/RN101_cc3m_12m_ep32.log) |
+|  Student | MobileViT-S |Baseline|32.60|[sh](https://github.com/winycg/CLIP-KD/blob/main/script/baseline/mobilevit_s_baseline.sh)|[model](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/timm-mobilevit_s_cc3m_12m_ep32.pt) \| [log](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/timm-mobilevit_s_cc3m_12m_ep32.log) |
+|  Student | MobileViT-S |CLIP-KD|34.97|[sh](https://github.com/winycg/CLIP-KD/blob/main/script/RN101_KD/mobilevit_s_kd.sh)| [model](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/RN101_cc3m_12m_kd_timm-mobilevit_s_cc3m_12m_ep32.pt) \| [log](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/RN101_cc3m_12m_kd_timm-mobilevit_s_cc3m_12m_ep32.log) |
+|  Student | Swin-T |Baseline|36.38|[sh](https://github.com/winycg/CLIP-KD/blob/main/script/baseline/swin_tiny_baseline.sh)|[model](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/timm-swin_tiny_patch4_windows7_224_cc3m_12m_ep32.pt) \| [log](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/timm-swin_tiny_patch4_windows7_224_cc3m_12m_ep32.log) |
+|  Student | Swin-T |CLIP-KD|39.51|[sh](https://github.com/winycg/CLIP-KD/blob/main/script/RN101_KD/swin_tiny_kd.sh)|[model](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/RN101_cc3m_12m_kd_timm-swin_tiny_patch4_windows7_224_cc3m_12m_ep32.pt) \| [log](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/RN101_cc3m_12m_kd_timm-swin_tiny_patch4_windows7_224_cc3m_12m_ep32.log) |
+|  Student | MobileNetV3 |Baseline|25.11|[sh](https://github.com/winycg/CLIP-KD/blob/main/script/baseline/mobilenetv3_small_100_baseline.sh)| [model](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/timm_mobilenetv3_small_100_cc3m_12m_ep32.pt) \| [log](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/timm_mobilenetv3_small_100_cc3m_12m_ep32.log) |
+|  Student | MobileNetV3 |CLIP-KD|26.15|[sh](https://github.com/winycg/CLIP-KD/blob/main/script/RN101_KD/mobilenetv3_small_100_kd.sh)| [model](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/RN101_cc3m_12m_kd_timm_mobilenetv3_small_100_cc3m_12.pt) \| [log](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/RN101_cc3m_12m_kd_timm_mobilenetv3_small_100_cc3m_12.log) |
+|  Student |  EfficientNet-B0 |Baseline|32.55|[sh](https://github.com/winycg/CLIP-KD/blob/main/script/baseline/efficientnet_b0_baseline.sh)| [model](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/timm-efficientnet-b0_cc3m_12m_ep32.pt) \| [log](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/timm-efficientnet-b0_cc3m_12m_ep32.log) |
+|  Student |  EfficientNet-B0 |CLIP-KD| 34.64|[sh](https://github.com/winycg/CLIP-KD/blob/main/script/RN101_KD/efficientnet_b0_kd.sh)| [model]() \| [log]() |
+|  Student |  ResNet-18 | Baseline|28.55 |[sh](https://github.com/winycg/CLIP-KD/blob/main/script/baseline/RN18_baseline.sh)| [model](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/timm-resnet18_cc3m_12m_ep32.pt) \| [log](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/timm-resnet18_cc3m_12m_ep32.log) |
+|  Student |  ResNet-18 | CLIP-KD|30.88|[sh](https://github.com/winycg/CLIP-KD/blob/main/script/RN101_KD/RN18_kd.sh)| [model](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/RN101_cc3m_12m_kd_timm-efficientnet-b0_cc3m_12m_ep32.pt) \| [log](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/RN101_cc3m_12m_kd_timm-efficientnet-b0_cc3m_12m_ep32.log) |
 
 
 ### Transferred from Laion-400M
@@ -109,20 +109,20 @@ The teacher is pretrained on Laion-400M. Students are distilled on CC3M+12M.
 
 | Role | Network | Method | ImageNet | Train script | Download |
 | :----: | :----: | :----: | :----: | :----: | :----:|
-|  Teacher |  ViT-L/14 |-| 72.8 |-|[model](https://github.com/mlfoundations/open_clip/releases/download/v0.2-weights/vit_l_14-laion400m_e32-3d133497.pt)|
-|  Student | ViT-B/16 |Baseline|37.0| [sh](https://github.com/winycg/CLIP-KD/blob/main/script/baseline/ViT_B_16_baseline.sh)|[model]() / [log]()|
-|  Student | ViT-B/16 |CLIP-KD|57.5|[sh](https://github.com/winycg/CLIP-KD/blob/main/script/ViT_L_14_KD_Laion/ViT_B_16_kd.sh)|[model]() / [log]()|
-|  Student | ViT-T/16 |Baseline|30.6|[sh](https://github.com/winycg/CLIP-KD/blob/main/script/baseline/ViT_T_16_baseline.sh)|[model]() / [log]()|
-|  Student | ViT-T/16 |CLIP-KD|40.9|[sh](https://github.com/winycg/CLIP-KD/blob/main/script/ViT_L_14_KD_Laion/ViT_T_16_kd.sh)|[model]() / [log]()|
+|  Teacher |  ViT-L/14 |-| 72.8 |-|[model](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/ViT_L_14-laion400m_ep32.pt)|
+|  Student | ViT-B/16 |Baseline|37.0| [sh](https://github.com/winycg/CLIP-KD/blob/main/script/baseline/ViT_B_16_baseline.sh)|[model](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/ViT_B_16_cc3m_12m_ep32.pt) \| [log](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/ViT_B_16_cc3m_12m_ep32.log)|
+|  Student | ViT-B/16 |CLIP-KD|57.5|[sh](https://github.com/winycg/CLIP-KD/blob/main/script/ViT_L_14_KD_Laion/ViT_B_16_kd.sh)|[model](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/ViT-L-14_laion400m_kd_ViT-B-16_cc3m_12m_ep32.pt) \| [log](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/ViT-L-14_laion400m_kd_ViT-B-16_cc3m_12m_ep32.log)|
+|  Student | ViT-T/16 |Baseline|30.6|[sh](https://github.com/winycg/CLIP-KD/blob/main/script/baseline/ViT_T_16_baseline.sh)|[model](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/ViT_T_16_cc3m_12m_ep32.pt) \| [log](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/ViT_T_16_cc3m_12m_ep32.log)|
+|  Student | ViT-T/16 |CLIP-KD|40.9|[sh](https://github.com/winycg/CLIP-KD/blob/main/script/ViT_L_14_KD_Laion/ViT_T_16_kd.sh)|[model](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/ViT-L-14_laion400m_kd_ViT-T-16_cc3m_12m_ep32.pt) \| [log](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/ViT-L-14_laion400m_kd_ViT-T-16_cc3m_12m_ep32.log)|
 
 
 | Role | Network | Method | ImageNet | Train script | Download |
 | :----: | :----: | :----: | :----: |:----:|:----:|
-|  Teacher |  ViT-B/16 |-| 67.1 |-|[model](https://github.com/mlfoundations/open_clip/releases/download/v0.2-weights/vit_b_16-laion400m_e32-55e67d44.pt)|
-|  Student | ViT-T/16 |Baseline|30.6| [sh](https://github.com/winycg/CLIP-KD/blob/main/script/baseline/ViT_T_16_baseline.sh)|
-|  Student | ViT-T/16 |CLIP-KD|42.6|[sh](https://github.com/winycg/CLIP-KD/blob/main/script/ViT_B_16_KD_Laion/ViT_T_16_kd.sh)|
-|  Student | ResNet-50 |Baseline|35.3|[sh](https://github.com/winycg/CLIP-KD/blob/main/script/baseline/RN50_baseline.sh)|
-|  Student | ResNet-50 |CLIP-KD|55.4| [sh](https://github.com/winycg/CLIP-KD/blob/main/script/ViT_B_16_KD_Laion/RN50_kd.sh)|
+|  Teacher |  ViT-B/16 |-| 67.1 |-|[model](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/ViT_B_16-laion400m_e32.pt)|
+|  Student | ViT-T/16 |Baseline|30.6| [sh](https://github.com/winycg/CLIP-KD/blob/main/script/baseline/ViT_T_16_baseline.sh)|[model](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/ViT_T_16_cc3m_12m_ep32.pt) \| [log](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/ViT_T_16_cc3m_12m_ep32.log)|
+|  Student | ViT-T/16 |CLIP-KD|42.6|[sh](https://github.com/winycg/CLIP-KD/blob/main/script/ViT_B_16_KD_Laion/ViT_T_16_kd.sh)| [model](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/ViT_B_16_laion400m_kd_ViT_T_16_cc3m_12m_ep32.pt) \| [log](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/ViT_B_16_laion400m_kd_ViT_T_16_cc3m_12m_ep32.log) |
+|  Student | ResNet-50 |Baseline|35.3|[sh](https://github.com/winycg/CLIP-KD/blob/main/script/baseline/RN50_baseline.sh)| [model](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/RN50_cc3m_12m_ep32.pt) \| [log](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/RN50_cc3m_12m_ep32.log) |
+|  Student | ResNet-50 |CLIP-KD|55.4| [sh](https://github.com/winycg/CLIP-KD/blob/main/script/ViT_B_16_KD_Laion/RN50_kd.sh)| [model](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/ViT-B-16_laion400m_kd_RN50_cc3m_12m_ep32.pt) \| [log](https://github.com/winycg/CLIP-KD/releases/download/CLIP-KDv0.1/ViT-B-16_laion400m_kd_RN50_cc3m_12m_ep32.log) |
 
 ### Evaluate pretrained models on more downstream tasks
 
